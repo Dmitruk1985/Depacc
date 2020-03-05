@@ -198,6 +198,7 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../.ssh" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">

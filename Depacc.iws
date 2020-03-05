@@ -1,45 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f51b71f-1d10-4aa1-9abd-2b01b2bdc9ca" name="Default Changelist" comment="First try">
-      <change afterPath="$PROJECT_DIR$/Depacc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Depacc.ipr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Depacc.iws" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Belhard/AdminMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Belhard/Gmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Belhard/Landing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Belhard/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Admin/CreateNewBusiness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Business/CreateNewOffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsClientTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/PasswordRecoveryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/RegisterNewConsumerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/TransferTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Belhard/AdminMenu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Belhard/ConsumerMenu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Belhard/Gmail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Belhard/Landing.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Belhard/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/Depacc.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/Belhard.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Belhard.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Belhard/Admin/CreateNewBusiness.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Belhard/Business/CreateNewOffer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Belhard/Consumer/BuyOfferAsClientTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Belhard/Consumer/BuyOfferAsEmployeeTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Belhard/Consumer/PasswordRecoveryTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Belhard/Consumer/RegisterNewConsumerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Belhard/Consumer/TransferTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Belhard/UnitTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/META-INF/Depacc.kotlin_module" afterDir="false" />
+    <list default="true" id="6f51b71f-1d10-4aa1-9abd-2b01b2bdc9ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Depacc.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -487,6 +450,14 @@
       <option name="presentableId" value="Default" />
       <updated>1580902123494</updated>
     </task>
+    <task id="LOCAL-00001" summary="First try">
+      <created>1583393782543</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583393782543</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -569,14 +540,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="519" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582808995201" />
-    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1583330919155">
+    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1583393781181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583330919155" />
-    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1583393266529">
+    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583393781181" />
+    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1583394916285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583393266529" />
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583394916285" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1583330924830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -613,14 +584,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="490" y="177" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582204695410" />
-    <state x="440" y="97" key="SettingsEditor" timestamp="1583393513777">
+    <state x="440" y="97" key="SettingsEditor" timestamp="1583394837650">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583393513777" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1583321559646">
+    <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583394837650" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1583394253705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583321559646" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583394253705" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580902131587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
