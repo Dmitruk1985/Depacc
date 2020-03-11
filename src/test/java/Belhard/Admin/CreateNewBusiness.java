@@ -1,13 +1,14 @@
 package Belhard.Admin;
 
-import Belhard.Gmail;
-import Belhard.Landing;
+import Belhard.AdminMenu;
+import Belhard.BusinessMenu;
+import Belhard.ConsumerMenu;
 import com.codeborne.selenide.Condition;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import static Belhard.AdminMenu.BUSINESS_LOGO;
-import static Belhard.Landing.PASSWORD;
+import static Belhard.BusinessMenu.BUSINESS_LOGO;
+import static Belhard.ConsumerMenu.PASSWORD;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CreateNewBusiness {
@@ -16,8 +17,8 @@ public class CreateNewBusiness {
     @Test
     public void createNewBusiness() {
 
-        Landing landing = new Landing();
-        landing.loginAdmin();
+        AdminMenu admin = new AdminMenu();
+        admin.loginAdmin();
         $(By.cssSelector("a[href='/admin/businesses']")).click();
         $(By.cssSelector("a[href='/admin/businesses/create']")).click();
         int j = (int) (Math.random() * 10000);
@@ -50,21 +51,16 @@ public class CreateNewBusiness {
         sleep(1000);
         $(By.cssSelector("button[class*='save']")).click();
         $(By.cssSelector("input[type='submit']")).click();
-        //Подтверждение регистрации на почте
-        Gmail gmail = new Gmail();
-        gmail.login();
-        gmail.openUnreadEmailBySubject("Инструкция подтверждения");
-        $(By.xpath("//a[contains(text(), 'Подтвердить мой аккаунт')]")).click();
-        //Удаление писем с подтверждением регистрации
-        switchTo().window(0);
-        gmail.deteleAllEmailsBySubject("Инструкция подтверждения");
-        switchTo().window(1);
+        //Подтверждение регистрации
+        ConsumerMenu consumer = new ConsumerMenu();
+        consumer.confirmRegistration();
         $(By.cssSelector("span[class*='checkbox']")).click();
         $(By.id("password")).setValue(PASSWORD);
         $(By.id("passwordConfirmation")).setValue(PASSWORD).pressEnter();
         //input[class='modal__btn']
         //Вход в созданный аккаунт
-        landing.loginBusinessByData(email,PASSWORD);
+        BusinessMenu business = new BusinessMenu();
+        business.loginBusinessByData(email,PASSWORD);
         $(By.cssSelector("button[class*='profile-business']")).should(Condition.exist);
 
         sleep(10000);

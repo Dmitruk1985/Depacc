@@ -10,10 +10,8 @@ public class UnitTest {
     @Test
     public void test() {
 
-        Landing landing = new Landing();
-        landing.ConsumerLoginByDefault();
         ConsumerMenu consumer = new ConsumerMenu();
-        consumer.getBalance("BYN");
+        consumer.loginConsumerByDefault();
 
         sleep(3000);
 

@@ -1,12 +1,14 @@
 package Belhard.Consumer;
 
+import Belhard.ConsumerMenu;
 import Belhard.Gmail;
 import com.codeborne.selenide.Condition;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
 
-import static Belhard.Landing.*;
+import static Belhard.ConsumerMenu.EMAIL_CONSUMER_AUXILIARY;
+import static Belhard.ConsumerMenu.URL_CONSUMER_SIGNIN;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PasswordRecoveryTest {
@@ -28,7 +30,7 @@ public class PasswordRecoveryTest {
         gmail.deteleAllEmailsBySubject("Восстановление пароля");
         //Генерация и ввод нового пароля
         switchTo().window(1);
-        String newPassword = PASSWORD + (int) (Math.random() * 100);
+        String newPassword = ConsumerMenu.PASSWORD + (int) (Math.random() * 100);
         $(By.id("password")).setValue(newPassword);
         $(By.id("passwordConfirmation")).setValue(newPassword).pressEnter();
         $(By.cssSelector("input[class='modal__btn']")).click();
