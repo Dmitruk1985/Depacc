@@ -12,7 +12,7 @@ public class ConsumerMenu {
     public static final String URL_CONSUMER_SIGNUP = "https://depacc-front-dev.herokuapp.com/consumer/signUp";
     public static final String EMAIL_CONSUMER = "automation.testing.depacc@gmail.com";
     public static final String EMAIL_CONSUMER_AUXILIARY = "automation.testing.depacc+consumer1@gmail.com";
-
+    public static final double CHARGE_AMOUNT = 0.01;
     public static final double TRANSFER_AMOUNT = 0.01;
     public static final String DEFAULT_OFFER = "Automatic offer Type 1";
     public static final String PASSWORD = "Qwerty1234567";
@@ -68,7 +68,6 @@ public class ConsumerMenu {
         for (int i = 0; i < size; i++) {
             String total = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
             balance [i] = roundDouble(Double.parseDouble(total.substring(0,total.indexOf(' '))));
-            System.out.println(balance [i]);
         }
         return balance;
     }
