@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f51b71f-1d10-4aa1-9abd-2b01b2bdc9ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1583929586975.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1583929586975.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1583929822075.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1583929822075.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1584012656558.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1584012656558.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1584013082881.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1584013082881.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Business/ChargeTest_Selenium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Depacc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Depacc.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1584367182180.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1584367182180.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/General/FooterLinksTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Depacc.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/TransferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/TransferTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Belhard/ConsumerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Belhard/ConsumerMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Belhard/Consumer/TransferTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Belhard/Consumer/TransferTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Belhard/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Belhard/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Belhard/UnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Belhard/UnitTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,6 +185,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_COMMON_BRANCH" value="master" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -296,7 +285,7 @@
       <recent name="Belhard.Business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChargeTest_Selenium.charge">
+  <component name="RunManager" selected="JUnit.FooterLinksTest.footerLinksTest">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -355,17 +344,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateNewConsumerTest.createNewConsumer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FooterLinksTest.footerLinksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Depacc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Belhard.Business.*" />
+          <option name="PATTERN" value="Belhard.General.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
-      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CreateNewConsumerTest" />
-      <option name="METHOD_NAME" value="createNewConsumer" />
+      <option name="PACKAGE_NAME" value="Belhard.General" />
+      <option name="MAIN_CLASS_NAME" value="Belhard.General.FooterLinksTest" />
+      <option name="METHOD_NAME" value="footerLinksTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -431,11 +420,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChargeTest_Selenium.charge" />
         <item itemvalue="JUnit.UnitTest.test" />
         <item itemvalue="JUnit.TransferTest.transferOffer" />
+        <item itemvalue="JUnit.FooterLinksTest.footerLinksTest" />
+        <item itemvalue="JUnit.ChargeTest_Selenium.charge" />
         <item itemvalue="JUnit.ChargeTest.charge" />
-        <item itemvalue="JUnit.CreateNewConsumerTest.createNewConsumer" />
       </list>
     </recent_temporary>
   </component>
@@ -506,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583925617979</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Second try">
+      <created>1584362929316</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584362929317</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -581,6 +577,10 @@
     <webview flattenPackages="false" showMembers="false" autoscrollToSource="false" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="181" key="#Notifications" timestamp="1584362980305">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="181" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1584362980305" />
     <state x="552" y="181" key="#Project_Structure" timestamp="1580903131464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -613,30 +613,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583754565172" />
-    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1584362813952">
+    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1584362927742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584362813952" />
+    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584362927742" />
     <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1583927554149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583927554149" />
-    <state width="1723" height="298" key="GridCell.Tab.0.bottom" timestamp="1584362814128">
+    <state width="1721" height="298" key="GridCell.Tab.0.bottom" timestamp="1584449495939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1723" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584362814128" />
-    <state width="1723" height="298" key="GridCell.Tab.0.center" timestamp="1584362814127">
+    <state width="1721" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584449495939" />
+    <state width="1721" height="298" key="GridCell.Tab.0.center" timestamp="1584449495939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1723" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584362814127" />
-    <state width="1723" height="298" key="GridCell.Tab.0.left" timestamp="1584362814127">
+    <state width="1721" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584449495939" />
+    <state width="1721" height="298" key="GridCell.Tab.0.left" timestamp="1584449495938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1723" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584362814127" />
-    <state width="1723" height="298" key="GridCell.Tab.0.right" timestamp="1584362814128">
+    <state width="1721" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584449495938" />
+    <state width="1721" height="298" key="GridCell.Tab.0.right" timestamp="1584449495939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1723" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584362814128" />
+    <state width="1721" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584449495939" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582902282513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -661,10 +661,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583394837650" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1583925635942">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1584362948645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583925635942" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584362948645" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580902131587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
