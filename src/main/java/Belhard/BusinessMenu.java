@@ -1,6 +1,7 @@
 package Belhard;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static Belhard.ConsumerMenu.PASSWORD;
@@ -12,6 +13,9 @@ public class BusinessMenu {
     public static final String EMAIL_BUSINESS = "automation.testing.depacc+business@gmail.com";
     public static final String BUSINESS_LOGO = "D:\\Automationtesting\\logo_business.jpg";
     public static final String BUSINESS_LOGO_NEW = "D:\\Automationtesting\\logo_business_2.jpg";
+    public static final String OFFER_IMAGE_1 = "D:\\Automationtesting\\offer.jpg";
+    public static final String OFFER_IMAGE_2 = "D:\\Automationtesting\\offer2.jpg";
+    public static final SelenideElement BUTTON_MENU_BUSINESS = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-business')]"));
 
     /*Вход в аккаунт с данными по умолчанию*/
     public void loginBusiness() {

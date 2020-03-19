@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import static Belhard.Main.URL_LANDING;
 import static com.codeborne.selenide.Selenide.*;
 
+/*Проверка работоспособности ссылкок в футере для всех ролей (гость/пользователь/бизнес)*/
 public class FooterLinksTest {
     @Test
     public void footerLinksTest() {
@@ -35,11 +36,9 @@ public class FooterLinksTest {
             back();
             $(By.xpath("//span[contains(text(), 'Facebook')]")).click();
             switchTo().window(1);
-            Assert.assertEquals("DepAcc - Главная | Facebook",title());
-           closeWindow();
+            Assert.assertEquals("DepAcc - Главная | Facebook", title());
+            closeWindow();
             switchTo().window(0);
         }
-
-        sleep(3000);
     }
 }

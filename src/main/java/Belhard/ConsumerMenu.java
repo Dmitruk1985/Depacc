@@ -16,6 +16,7 @@ public class ConsumerMenu {
     public static final double TRANSFER_AMOUNT = 0.01;
     public static final String DEFAULT_OFFER = "Automatic offer Type 1";
     public static final String PASSWORD = "Qwerty1234567";
+    public static final SelenideElement BUTTON_MENU_CONSUMER = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-consumer')]"));
 
     /*Вход в аккаунт с данными по умолчанию*/
     public void loginConsumerByDefault() {
@@ -108,5 +109,12 @@ public class ConsumerMenu {
         switchTo().window(0);
         gmail.deteleAllEmailsBySubject("Инструкция подтверждения");
         switchTo().window(1);
+    }
+
+    /**/
+    public void singOut(){
+        BUTTON_MENU_CONSUMER.click();
+        $(By.xpath("//section[contains(@class, 'header__desktop')]//input[contains(@value, 'Выход')]")).click();
+        $(By.cssSelector("button[class*='primary']")).click();
     }
 }

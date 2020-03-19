@@ -5,6 +5,7 @@ import com.codeborne.selenide.Condition;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
+import static Belhard.ConsumerMenu.BUTTON_MENU_CONSUMER;
 import static com.codeborne.selenide.Selenide.$;
 
 public class BuyOfferAsClientTest {
@@ -25,6 +26,6 @@ public class BuyOfferAsClientTest {
         $(By.name("commit")).click();
         $(By.cssSelector("a[class*='button']")).waitUntil(Condition.exist,10000).click();
         $(By.cssSelector("button[class*='result']")).click();
-        $(By.cssSelector("button[class*='profile-consumer']")).should(Condition.exist);
+        BUTTON_MENU_CONSUMER.should(Condition.exist);
     }
 }

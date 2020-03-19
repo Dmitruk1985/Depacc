@@ -5,17 +5,19 @@ import com.codeborne.selenide.Condition;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
+import static Belhard.BusinessMenu.BUTTON_MENU_BUSINESS;
+import static Belhard.BusinessMenu.OFFER_IMAGE_1;
 import static com.codeborne.selenide.Selenide.*;
 
-public class CreateNewOffer {
+public class CreateNewOffer_Type1 {
     @Test
     public void createNewOffer() {
         BusinessMenu business = new BusinessMenu();
         business.loginBusiness();
-        open("https://depacc-front-dev.herokuapp.com/business/offer/create");
+        open("/offer/create");
         //загрузка изображения офера
         $(By.cssSelector("button[class*='offer-create']")).click();
-        $(By.name("newImage")).setValue("D:\\Automationtesting\\offer.jpg");
+        $(By.name("newImage")).setValue(OFFER_IMAGE_1);
         $(By.cssSelector("input[class*='save']")).click();
         $(By.id("title")).setValue("Automatic offer Type 1");
         $(By.id("category")).selectOptionContainingText("Automatic");
@@ -34,6 +36,6 @@ public class CreateNewOffer {
         $(By.cssSelector("input[class*='submit']")).click();
         $(By.cssSelector("input[class*='submit']")).click();
         //Проверка отображения кнопки главного меню
-       $(By.cssSelector("button[class*='profile-business']")).shouldBe(Condition.exist);
+        BUTTON_MENU_BUSINESS.shouldBe(Condition.exist);
     }
 }

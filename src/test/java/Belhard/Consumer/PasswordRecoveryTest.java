@@ -7,8 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 
 
-import static Belhard.ConsumerMenu.EMAIL_CONSUMER_AUXILIARY;
-import static Belhard.ConsumerMenu.URL_CONSUMER_SIGNIN;
+import static Belhard.ConsumerMenu.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PasswordRecoveryTest {
@@ -38,6 +37,6 @@ public class PasswordRecoveryTest {
         $(By.id("email")).setValue(EMAIL_CONSUMER_AUXILIARY);
         $(By.id("password")).setValue(newPassword).pressEnter();
         //Проверка наличия кнопки главного меню Пользователя
-        $(By.cssSelector("button[class*='profile-consumer']")).should(Condition.exist);
+        BUTTON_MENU_CONSUMER.should(Condition.exist);
     }
 }

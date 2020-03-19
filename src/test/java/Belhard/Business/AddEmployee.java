@@ -6,6 +6,7 @@ import com.codeborne.selenide.Condition;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
+import static Belhard.ConsumerMenu.BUTTON_MENU_CONSUMER;
 import static Belhard.ConsumerMenu.PASSWORD;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -36,6 +37,6 @@ public class AddEmployee {
         $(By.id("email")).setValue(email);
         $(By.id("password")).setValue(PASSWORD).pressEnter();
         //Проверка наличия кнопки главного меню
-       $(By.cssSelector("button[class*='profile-consumer']")).should(Condition.exist);
+      BUTTON_MENU_CONSUMER.should(Condition.exist);
     }
 }

@@ -1,12 +1,11 @@
 package Belhard.Consumer;
 
 import Belhard.ConsumerMenu;
-import com.codeborne.selenide.Condition;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import static Belhard.ConsumerMenu.URL_CONSUMER_SIGNUP;
-import static Belhard.ConsumerMenu.PASSWORD;
+import static Belhard.ConsumerMenu.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -30,7 +29,8 @@ public class CreateNewConsumerTest {
         //Вход в приложение с созданным пользователем
         consumer.loginConsumerByData(email, PASSWORD);
         //Проверка входа в аккаунт
-        $(By.cssSelector("button[class*='profile-consumer']")).should(Condition.exist);
+        BUTTON_MENU_CONSUMER.click();
+        Assert.assertEquals(email, $(By.className("profile-info__name-content")).innerText());
 
     }
 }
