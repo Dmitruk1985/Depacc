@@ -10,6 +10,7 @@ public class ConsumerMenu {
 
     public static final String URL_CONSUMER_SIGNIN = "https://depacc-front-dev.herokuapp.com/consumer/signIn";
     public static final String URL_CONSUMER_SIGNUP = "https://depacc-front-dev.herokuapp.com/consumer/signUp";
+    public static final String URL_LANDING = "https://depacc-front-dev.herokuapp.com";
     public static final String EMAIL_CONSUMER = "automation.testing.depacc@gmail.com";
     public static final String EMAIL_CONSUMER_AUXILIARY = "automation.testing.depacc+consumer1@gmail.com";
     public static final double CHARGE_AMOUNT = 0.01;
@@ -98,20 +99,21 @@ public class ConsumerMenu {
             }
         }
     }
+
     /*Частичное подтверждение регистрации*/
     public void confirmRegistration(){
         //Подтверждение регистрации по ссылке на почте
         Gmail gmail = new Gmail();
         gmail.login();
-        gmail.openUnreadEmailBySubject("Инструкция подтверждения");
+        gmail.openUnreadEmailBySubject("Подтверждение регистрации");
         $(By.xpath("//a[contains(text(), 'Подтвердить мой аккаунт')]")).click();
-        //Удаление писем с подтверждением регистрации
+        //Удаление всех писем (для корректной работы все лишние письма должны удаляться)
         switchTo().window(0);
-        gmail.deteleAllEmailsBySubject("Инструкция подтверждения");
+        gmail.deteleAllEmails();
         switchTo().window(1);
     }
 
-    /**/
+    /*Выход из аккаунта*/
     public void singOut(){
         BUTTON_MENU_CONSUMER.click();
         $(By.xpath("//section[contains(@class, 'header__desktop')]//input[contains(@value, 'Выход')]")).click();

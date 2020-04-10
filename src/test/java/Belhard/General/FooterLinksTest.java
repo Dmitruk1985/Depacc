@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import static Belhard.Main.URL_LANDING;
+import static Belhard.ConsumerMenu.URL_LANDING;
 import static com.codeborne.selenide.Selenide.*;
 
 /*Проверка работоспособности ссылкок в футере для всех ролей (гость/пользователь/бизнес)*/

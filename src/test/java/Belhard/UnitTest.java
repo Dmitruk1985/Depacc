@@ -1,24 +1,19 @@
 package Belhard;
 
+import com.codeborne.selenide.Configuration;
 import org.junit.Test;
-import org.openqa.selenium.By;
-
-import static Belhard.Main.URL_LANDING;
-import static com.codeborne.selenide.Selenide.*;
 
 
 public class UnitTest {
 
     @Test
     public void test() {
+        Configuration.holdBrowserOpen = true;
 
-
-        open(URL_LANDING);
-        $(By.xpath("//span[contains(text(), 'Facebook')]")).click();
-        switchTo().window(1);
-        System.out.println(title());
-
-        sleep(3000);
+        AdminMenu admin = new AdminMenu();
+        admin.loginAdmin();
+        admin.setBusinessShopByEmail("automation.testing.depacc+business9238@gmail.com");
+      // admin.setBusinessShopByEmail("dmitry.dmitruk1985+b8@gmail.com");
 
 
     }
