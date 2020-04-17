@@ -5,6 +5,7 @@ import com.codeborne.selenide.Condition;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
+import static Belhard.BusinessMenu.DEFAULT_OFFER_NAME;
 import static Belhard.ConsumerMenu.BUTTON_MENU_CONSUMER;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -13,7 +14,7 @@ public class BuyOfferAsClientTest {
     public void buyOfferAsClient(){
         ConsumerMenu consumer = new ConsumerMenu();
         consumer.loginConsumerByDefault();
-        consumer.openOfferByName("Automatic offer Type 1");
+        consumer.searchOfferByName(DEFAULT_OFFER_NAME);
         $(By.cssSelector("input[class*='accept']")).click();
         $(By.id("request_credit_card_number_1")).setValue("4200");
         $(By.id("request_credit_card_number_2")).setValue("0000");

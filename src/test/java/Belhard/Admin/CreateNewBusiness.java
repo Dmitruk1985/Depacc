@@ -25,9 +25,7 @@ public class CreateNewBusiness {
         int j = (int) (Math.random() * 10000);
         String email = "automation.testing.depacc+business" + j + "@gmail.com";
         System.out.println(email);
-        $(By.cssSelector("button[class='admin__btn']")).click();
-        $(By.name("newImage")).setValue(BUSINESS_LOGO);
-        $(By.cssSelector("input[class*='save']")).click();
+
         $(By.id("email")).setValue(email);
         $(By.id("legalName")).setValue("Automatic Business " + j);
         $(By.id("brandName")).setValue("Brand Automatic Business " + j);
@@ -43,7 +41,7 @@ public class CreateNewBusiness {
             $(By.cssSelector("input[name='checkbox-group']"),i).click();
         }
         $(By.id("maxHoldingPeriod")).setValue("3");
-        //Создание рабочей точки
+       /* //Создание рабочей точки
         $(By.cssSelector("button[class*='shops']")).click();
         $(By.id("name")).setValue("Test Shop");
         $(By.id("address")).setValue("г. Минск, ул. Мельникайте 2, офис 1604");
@@ -51,9 +49,13 @@ public class CreateNewBusiness {
         $(By.id("shopWorkingHours")).setValue("8:00-22:00");
         $(By.cssSelector("button[class*='resolve']")).click();
         sleep(1000);
-        $(By.cssSelector("button[class*='save']")).click();
+        $(By.cssSelector("button[class*='save']")).click();*/
+        //Загрузка логотипа
+        $(By.cssSelector("button[class='admin__btn']")).click();
+        $(By.name("newImage")).setValue(BUSINESS_LOGO);
+        $(By.cssSelector("input[class*='save']")).click();
         $(By.cssSelector("input[type='submit']")).click();
-        sleep(1000);
+        sleep(5000);
         //Заполнение данных магазина
         admin.setBusinessShopByEmail(email);
         //Подтверждение регистрации
