@@ -16,6 +16,7 @@ public class BusinessMenu {
     public static final String OFFER_IMAGE_1 = "D:\\Automationtesting\\offer.jpg";
     public static final String OFFER_IMAGE_2 = "D:\\Automationtesting\\offer2.jpg";
     public static final String DEFAULT_OFFER_NAME = "Automatic offer Type 1";
+    public static final String BUSINESS_NAME = "Automatic Business";
     public static final SelenideElement BUTTON_MENU_BUSINESS = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-business')]"));
 
     /*Вход в аккаунт с данными по умолчанию*/

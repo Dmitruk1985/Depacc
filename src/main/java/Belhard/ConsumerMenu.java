@@ -17,6 +17,7 @@ public class ConsumerMenu {
     public static final double CHARGE_AMOUNT = 0.01;
     public static final double TRANSFER_AMOUNT = 0.01;
     public static final String DEFAULT_OFFER = "Automatic offer Type 1";
+    public static final String CONSUMER_NAME = "Automatic User";
     public static final String PASSWORD = "Qwerty1234567";
     public static final SelenideElement BUTTON_MENU_CONSUMER = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-consumer')]"));
  //   public static final int CURRENCY_QUANTITY = $$(By.xpath("//section[contains(@class, 'header__desktop')]//li[@class='profile-info__amount']")).size();
@@ -41,7 +42,7 @@ public class ConsumerMenu {
         $(By.xpath("//section[contains(@class, 'header__desktop')]//input[@value='История операций']")).click();
     }
     /*Округление дробного числа до двух знаков*/
-    double roundDouble (double d) {
+    public double roundDouble (double d) {
         d = d*100;
         int i = (int) Math.round(d);
         return (double) i/100;
@@ -49,14 +50,15 @@ public class ConsumerMenu {
 
     /*Получение стоимости оффера*/
     public double getOfferAmmount() {
-        sleep(500);
-        double amount = Double.parseDouble($(By.cssSelector("span[class='offer-current__amount']")).innerText());
-        return roundDouble (amount);
+        sleep(1000);
+        double amount = roundDouble(Double.parseDouble($(By.cssSelector("span[class='offer-current__amount']")).innerText()));
+        System.out.println("Стоимость оффера = "+amount);
+        return amount;
     }
 
     /*Получение суммы депака*/
     public double getDepaccAmmount() {
-        sleep(500);
+        sleep(1000);
         double amount = Double.parseDouble($(By.cssSelector("span[class='offer-current-accepted__amount']")).innerText());
         return roundDouble (amount);
     }
@@ -78,8 +80,9 @@ public class ConsumerMenu {
     /*Получение суммы баланса всех доступных валют*/
     public double[] getTotalBalance() {
         BUTTON_MENU_CONSUMER.click();
+        sleep(1000);
         int size = $$(By.cssSelector("li[class='profile-info__amount']")).size() / 2;
-        System.out.println(size);
+        System.out.println("Количество валют = "+size);
         double[] balance = new double[size];
         for (int i = 0; i < size; i++) {
             String total = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
@@ -134,12 +137,18 @@ public class ConsumerMenu {
         switchTo().window(1);
     }
 
-    public void checkOperationsHistory(String title, double amount){
+    public void checkOperationsHistory(String title, String sender, String recipient, double amount, String currency){
         open("/deposit_transactions");
         //Проверка названия операции
         $(By.cssSelector("span[class*='transaction-item__title']")).shouldHave(Condition.text(title));
+        //Проверка отправителя операции
+        $(By.cssSelector("span[class='transaction-item__name']")).shouldHave(Condition.text(sender));
+        //Проверка получателя операции
+        $(By.cssSelector("span[class='transaction-item__name']"),1).shouldHave(Condition.text(recipient));
         //Проверка суммы операции
-        $(By.cssSelector("span[class='transaction-item__name transaction-item__amount']")).shouldHave(Condition.text(String.valueOf(amount)));
+        $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(String.valueOf(amount)));
+        //Проверка валюты операции
+        $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(currency));
     }
 
     /*Выход из аккаунта*/

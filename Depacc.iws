@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f51b71f-1d10-4aa1-9abd-2b01b2bdc9ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587124218402.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587124218402.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587124563170.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587124563170.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587124880411.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587124880411.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587126496808.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587126496808.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587127651935.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587127651935.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587127804751.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587127804751.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587127916235.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587127916235.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587127969449.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587130094012.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587130094012.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587388614370.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587388614370.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587389822120.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587389822120.0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Depacc.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Admin/CreateNewBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Admin/CreateNewBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsClientTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -300,7 +285,7 @@
       <recent name="Belhard.Business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuyOfferAsEmployeeTest">
+  <component name="RunManager" selected="JUnit.BuyOfferAsEmployeeTest.BuyOfferAsEmployee">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -434,8 +419,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BuyOfferAsEmployeeTest" />
         <item itemvalue="JUnit.BuyOfferAsEmployeeTest.BuyOfferAsEmployee" />
+        <item itemvalue="JUnit.BuyOfferAsEmployeeTest" />
         <item itemvalue="JUnit.BuyOfferAsClientTest.buyOfferAsClient" />
         <item itemvalue="JUnit.CreateNewBusiness.createNewBusiness" />
         <item itemvalue="JUnit.UnitTest.test" />
@@ -523,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586528517371</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Second try">
+      <created>1587132041957</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587132041957</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -634,30 +626,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583754565172" />
-    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1587132009439">
+    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1587132040803">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587132009439" />
+    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587132040803" />
     <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1583927554149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583927554149" />
-    <state width="1716" height="339" key="GridCell.Tab.0.bottom" timestamp="1587131693611">
+    <state width="1715" height="339" key="GridCell.Tab.0.bottom" timestamp="1587391406244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1716" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587131693611" />
-    <state width="1716" height="339" key="GridCell.Tab.0.center" timestamp="1587131693610">
+    <state width="1715" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587391406244" />
+    <state width="1715" height="339" key="GridCell.Tab.0.center" timestamp="1587391406244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1716" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587131693610" />
-    <state width="1716" height="339" key="GridCell.Tab.0.left" timestamp="1587131693610">
+    <state width="1715" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587391406244" />
+    <state width="1715" height="339" key="GridCell.Tab.0.left" timestamp="1587391406244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1716" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587131693610" />
-    <state width="1716" height="339" key="GridCell.Tab.0.right" timestamp="1587131693610">
+    <state width="1715" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587391406244" />
+    <state width="1715" height="339" key="GridCell.Tab.0.right" timestamp="1587391406244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1716" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587131693610" />
+    <state width="1715" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587391406244" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582902282513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -682,10 +674,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583394837650" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1586528528826">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1587132052055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586528528826" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587132052055" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580902131587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
