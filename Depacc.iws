@@ -2,14 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f51b71f-1d10-4aa1-9abd-2b01b2bdc9ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587388614370.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587388614370.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587389822120.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587389822120.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469673181.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469673181.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469709059.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469709059.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469757462.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469757462.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587470659860.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587470659860.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587471008523.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587471008523.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547188884.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547188884.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547313176.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547313176.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547404026.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547404026.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547473890.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547473890.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547971048.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547971048.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponTransferTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Depacc.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,10 +299,11 @@
       <recent name="Belhard.Business" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Belhard.Consumer" />
       <recent name="Belhard.Business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuyOfferAsEmployeeTest.BuyOfferAsEmployee">
+  <component name="RunManager" selected="JUnit.CouponTransferTest.couponTransfer">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -364,17 +382,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateNewBusiness.createNewBusiness" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CouponTransferTest.couponTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Depacc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Belhard.Admin.*" />
+          <option name="PATTERN" value="Belhard.Consumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Belhard.Admin" />
-      <option name="MAIN_CLASS_NAME" value="Belhard.Admin.CreateNewBusiness" />
-      <option name="METHOD_NAME" value="createNewBusiness" />
+      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
+      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CouponTransferTest" />
+      <option name="METHOD_NAME" value="couponTransfer" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -419,11 +437,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CouponTransferTest.couponTransfer" />
+        <item itemvalue="JUnit.UnitTest.test" />
         <item itemvalue="JUnit.BuyOfferAsEmployeeTest.BuyOfferAsEmployee" />
         <item itemvalue="JUnit.BuyOfferAsEmployeeTest" />
         <item itemvalue="JUnit.BuyOfferAsClientTest.buyOfferAsClient" />
-        <item itemvalue="JUnit.CreateNewBusiness.createNewBusiness" />
-        <item itemvalue="JUnit.UnitTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -515,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587132041957</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Second try">
+      <created>1587391573677</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587391573677</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -626,30 +651,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583754565172" />
-    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1587132040803">
+    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1587391572653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587132040803" />
+    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587391572653" />
     <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1583927554149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583927554149" />
-    <state width="1715" height="339" key="GridCell.Tab.0.bottom" timestamp="1587391406244">
+    <state width="1712" height="339" key="GridCell.Tab.0.bottom" timestamp="1587548192084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1715" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587391406244" />
-    <state width="1715" height="339" key="GridCell.Tab.0.center" timestamp="1587391406244">
+    <state width="1712" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587548192084" />
+    <state width="1712" height="339" key="GridCell.Tab.0.center" timestamp="1587548192084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1715" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587391406244" />
-    <state width="1715" height="339" key="GridCell.Tab.0.left" timestamp="1587391406244">
+    <state width="1712" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587548192084" />
+    <state width="1712" height="339" key="GridCell.Tab.0.left" timestamp="1587548192083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1715" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587391406244" />
-    <state width="1715" height="339" key="GridCell.Tab.0.right" timestamp="1587391406244">
+    <state width="1712" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587548192083" />
+    <state width="1712" height="339" key="GridCell.Tab.0.right" timestamp="1587548192084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1715" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587391406244" />
+    <state width="1712" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587548192084" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582902282513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
