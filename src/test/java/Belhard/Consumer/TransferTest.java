@@ -20,7 +20,7 @@ public class TransferTest {
         consumer.openDepaccByName(DEFAULT_OFFER);
         double oldAmount = consumer.getDepaccAmmount();
         $(By.cssSelector("button[class*='transfer']")).click();
-        $(By.id("recipientEmail")).setValue(EMAIL_CONSUMER_AUXILIARY);
+        $(By.id("recipientEmail")).setValue(EMAIL_CONSUMER_TEST);
         $(By.id("transferAmount")).setValue(String.valueOf(TRANSFER_AMOUNT)).pressEnter();
         $(By.cssSelector("input[class*='confirmation__btn--open']")).click();
         $(By.cssSelector("input[class='modal__btn']")).click();

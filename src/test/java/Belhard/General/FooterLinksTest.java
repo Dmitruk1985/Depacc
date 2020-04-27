@@ -22,7 +22,7 @@ public class FooterLinksTest {
             }
             if (i == 2) {
                 BusinessMenu business = new BusinessMenu();
-                business.loginBusiness();
+                business.login();
             }
             $(By.cssSelector("div[class*='offer__photo-wrapper']")).click();
             $(By.xpath("//span[contains(text(), 'О сервисе')]")).click();

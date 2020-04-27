@@ -17,7 +17,7 @@ public class PasswordRecoveryTest {
         //Отправка запроса на восстановление пароля
         open(URL_CONSUMER_SIGNIN);
         $(By.cssSelector("input[class*='signin__restore']")).click();
-        $(By.id("email")).setValue(EMAIL_CONSUMER_AUXILIARY).pressEnter();
+        $(By.id("email")).setValue(EMAIL_CONSUMER_TEST).pressEnter();
         $(By.cssSelector("input[class='modal__btn']")).click();
         //Открытие письма со ссылкой на восстановление пароля
         Gmail gmail = new Gmail();
@@ -34,7 +34,7 @@ public class PasswordRecoveryTest {
         $(By.id("passwordConfirmation")).setValue(newPassword).pressEnter();
         $(By.cssSelector("input[class='modal__btn']")).click();
         //Вход с новым паролем
-        $(By.id("email")).setValue(EMAIL_CONSUMER_AUXILIARY);
+        $(By.id("email")).setValue(EMAIL_CONSUMER_TEST);
         $(By.id("password")).setValue(newPassword).pressEnter();
         //Проверка наличия кнопки главного меню Пользователя
         BUTTON_MENU_CONSUMER.should(Condition.exist);

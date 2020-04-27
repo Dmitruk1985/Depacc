@@ -9,11 +9,10 @@ public class UnitTest {
     @Test
     public void test() {
         Configuration.holdBrowserOpen = true;
-double d=0;
-        String s = String.valueOf(d);
-        String s2=s.substring(0,1);
-        System.out.println(s2);
-
-
+        ConsumerMenu consumer = new ConsumerMenu();
+        consumer.loginConsumerByDefault();
+        consumer.openMyDepaccs();
+      consumer.searchDepacc("Депак");
+      consumer.getDepaccCurrency();
     }
 }

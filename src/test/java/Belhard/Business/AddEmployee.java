@@ -14,7 +14,7 @@ public class AddEmployee {
     @Test
     public void addEmployee() {
       BusinessMenu business = new BusinessMenu();
-        business.loginBusiness();
+        business.login();
         open("/employees/create");
         $(By.id("firstName")).setValue("Automatic");
         $(By.id("lastName")).setValue("Employee");

@@ -2,30 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f51b71f-1d10-4aa1-9abd-2b01b2bdc9ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469673181.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469673181.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469709059.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469709059.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469757462.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587469757462.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587470659860.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587470659860.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587471008523.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587471008523.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547188884.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547188884.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547313176.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547313176.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547404026.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547404026.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547473890.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547473890.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547971048.0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587547971048.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponTransferTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587625132592.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587625132592.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587625183475.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587625183475.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587626814145.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587626814145.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587626993936.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587626993936.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587627218019.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587627218019.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587628360814.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587628858798.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587628994546.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587628994546.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629240576.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629240576.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629323800.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629323800.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629365148.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629365148.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629475971.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629475971.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629862792.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587629862792.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587630008030.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587630008030.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587630289896.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587630289896.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587630480084.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587630480084.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587631181350.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587631181350.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587631435153.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587631435153.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587643642710.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587643642710.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587643703142.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587643703142.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644114270.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644114270.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644176115.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644176115.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644419347.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644419347.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644525462.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644586175.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644586175.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644649848.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644649848.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644765648.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644765648.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644823447.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587644823447.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587645034340.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587645034340.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587645325176.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587645325176.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587647102106.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587647102106.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587649241002.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587649241002.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587649356898.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587649356898.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587649635528.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587649635528.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587649950139.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587649950139.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587988962355.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587988962355.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587989209325.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587989209325.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587989400006.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587989400006.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587991507102.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587991507102.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587991988670.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587991988670.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587994931898.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587994931898.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587995072212.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1587995072212.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponReleaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Depacc.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/Gmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/Gmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Admin/CreateNewBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Admin/CreateNewBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Business/AddEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Business/AddEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Business/ChangeLogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Business/ChangeLogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Business/CreateNewOffer_Type1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Business/CreateNewOffer_Type1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Business/CreateNewOffer_Type2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Business/CreateNewOffer_Type2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponTransferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponTransferTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/PasswordRecoveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/PasswordRecoveryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/TransferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/TransferTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/General/FooterLinksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/General/FooterLinksTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -303,7 +376,7 @@
       <recent name="Belhard.Business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CouponTransferTest.couponTransfer">
+  <component name="RunManager" selected="JUnit.CouponReleaseTest.couponRelease">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -316,47 +389,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BuyOfferAsClientTest.buyOfferAsClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Depacc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Belhard.Consumer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
-      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.BuyOfferAsClientTest" />
-      <option name="METHOD_NAME" value="buyOfferAsClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BuyOfferAsEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Depacc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Belhard.Consumer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
-      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.BuyOfferAsEmployeeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -382,6 +414,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CouponReleaseTest.couponRelease" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Depacc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Belhard.Consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
+      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CouponReleaseTest" />
+      <option name="METHOD_NAME" value="couponRelease" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CouponTransferTest.couponTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Depacc" />
       <extension name="coverage">
@@ -393,6 +446,27 @@
       <option name="PACKAGE_NAME" value="Belhard.Consumer" />
       <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CouponTransferTest" />
       <option name="METHOD_NAME" value="couponTransfer" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateNewBusiness.createNewBusiness" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Depacc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Belhard.Admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Belhard.Admin" />
+      <option name="MAIN_CLASS_NAME" value="Belhard.Admin.CreateNewBusiness" />
+      <option name="METHOD_NAME" value="createNewBusiness" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -437,11 +511,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CouponTransferTest.couponTransfer" />
-        <item itemvalue="JUnit.UnitTest.test" />
+        <item itemvalue="JUnit.CouponReleaseTest.couponRelease" />
         <item itemvalue="JUnit.BuyOfferAsEmployeeTest.BuyOfferAsEmployee" />
-        <item itemvalue="JUnit.BuyOfferAsEmployeeTest" />
-        <item itemvalue="JUnit.BuyOfferAsClientTest.buyOfferAsClient" />
+        <item itemvalue="JUnit.UnitTest.test" />
+        <item itemvalue="JUnit.CouponTransferTest.couponTransfer" />
+        <item itemvalue="JUnit.CreateNewBusiness.createNewBusiness" />
       </list>
     </recent_temporary>
   </component>
@@ -540,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587391573677</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Second try">
+      <created>1587564534037</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587564534037</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -651,46 +732,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583754565172" />
-    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1587391572653">
+    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1587996109040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587391572653" />
+    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587996109040" />
     <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1583927554149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583927554149" />
-    <state width="1712" height="339" key="GridCell.Tab.0.bottom" timestamp="1587548192084">
+    <state width="1704" height="239" key="GridCell.Tab.0.bottom" timestamp="1587996109092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1712" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587548192084" />
-    <state width="1712" height="339" key="GridCell.Tab.0.center" timestamp="1587548192084">
+    <state width="1704" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587996109092" />
+    <state width="1704" height="239" key="GridCell.Tab.0.center" timestamp="1587996109092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1712" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587548192084" />
-    <state width="1712" height="339" key="GridCell.Tab.0.left" timestamp="1587548192083">
+    <state width="1704" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587996109092" />
+    <state width="1704" height="239" key="GridCell.Tab.0.left" timestamp="1587996109092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1712" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587548192083" />
-    <state width="1712" height="339" key="GridCell.Tab.0.right" timestamp="1587548192084">
+    <state width="1704" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587996109092" />
+    <state width="1704" height="239" key="GridCell.Tab.0.right" timestamp="1587996109092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1712" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587548192084" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582902282513">
+    <state width="1704" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587996109092" />
+    <state width="938" height="264" key="GridCell.Tab.1.bottom" timestamp="1587650508846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582902282513" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582902282513">
+    <state width="938" height="264" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587650508846" />
+    <state width="938" height="264" key="GridCell.Tab.1.center" timestamp="1587650508846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582902282513" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582902282513">
+    <state width="938" height="264" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587650508846" />
+    <state width="938" height="264" key="GridCell.Tab.1.left" timestamp="1587650508846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582902282513" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582902282513">
+    <state width="938" height="264" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587650508846" />
+    <state width="938" height="264" key="GridCell.Tab.1.right" timestamp="1587650508846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582902282513" />
+    <state width="938" height="264" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587650508846" />
     <state x="490" y="177" key="Maven.ArtifactSearchDialog" timestamp="1582204695410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -699,10 +780,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583394837650" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1587132052055">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1587564563093">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587132052055" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587564563093" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580902131587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

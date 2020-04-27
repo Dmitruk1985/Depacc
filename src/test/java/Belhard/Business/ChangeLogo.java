@@ -11,7 +11,7 @@ public class ChangeLogo {
     @Test
     public void changeLogo() {
         BusinessMenu business = new BusinessMenu();
-        business.loginBusiness();
+        business.login();
         open("/profile/edit");
         $(By.cssSelector("span[class*='edit']")).click();
         $(By.name("newImage")).setValue(BUSINESS_LOGO_NEW);

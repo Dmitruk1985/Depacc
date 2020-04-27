@@ -6,6 +6,9 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static com.codeborne.selenide.Selenide.*;
 
 public class ConsumerMenu {
@@ -14,12 +17,12 @@ public class ConsumerMenu {
     public static final String URL_CONSUMER_SIGNUP = "https://depacc-front-dev.herokuapp.com/consumer/signUp";
     public static final String URL_LANDING = "https://depacc-front-dev.herokuapp.com";
     public static final String EMAIL_CONSUMER = "automation.testing.depacc@gmail.com";
-    public static final String EMAIL_CONSUMER_AUXILIARY = "automation.testing.depacc+consumer1@gmail.com";
+    public static final String EMAIL_CONSUMER_TEST = "automation.testing.depacc+consumer1@gmail.com";
     public static final double CHARGE_AMOUNT = 0.01;
     public static final double TRANSFER_AMOUNT = 0.01;
     public static final String DEFAULT_OFFER = "Automatic offer Type 1";
     public static final String CONSUMER_NAME = "Automatic User";
-    public static final String CONSUMER_AUXILIARY_NAME = "Automatic Auxiliary User";
+    public static final String CONSUMER_TEST_NAME = "Automatic Auxiliary User";
     public static final String PASSWORD = "Qwerty1234567";
     public static final SelenideElement BUTTON_MENU_CONSUMER = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-consumer')]"));
     public static final ElementsCollection CURRENCIES = $$(By.xpath("//section[contains(@class, 'header__desktop')]//li[@class='profile-info__amount']"));
@@ -29,102 +32,85 @@ public class ConsumerMenu {
     public static final String HISTORY_COUPON_TRANSFER = "Трансфер купона";
 
     /*Блок названий записей в разделе "Сообщения"*/
-    public static final String NOTIFICATION_NEW_DEPACC = "Вы открыли новый депак";
+    public static final String MESSAGE_NEW_DEPACC = "Вы открыли новый депак";
+    public static final String MESSAGE_COUPON_TRANSFER = "Вы получили трансфер купона";
 
+    /*Блок названий в уведомлениях на почте*/
+    public static final String MAIL_CONFIRMATION_TITLE = "Подтверждение регистрации";
+    public static final String MAIL_CONFIRMATION_LINK = "Подтвердить мой аккаунт";
+    public static final String MAIL_NEW_DEPACC = "Новый депак";
+
+    /**Блок функций входа и выхода из аккаунта**/
     /*Вход в аккаунт с данными по умолчанию*/
     public void loginConsumerByDefault() {
-        Configuration.baseUrl="https://depacc-front-dev.herokuapp.com/consumer";
+        Configuration.baseUrl = "https://depacc-front-dev.herokuapp.com/consumer";
         open(URL_CONSUMER_SIGNIN);
         $(By.id("email")).setValue(EMAIL_CONSUMER);
         $(By.id("password")).setValue(PASSWORD).pressEnter();
     }
+
     /*Вход в аккаунт с определенными данными*/
     public void loginConsumerByData(String s1, String s2) {
-        Configuration.baseUrl="https://depacc-front-dev.herokuapp.com/consumer";
+        Configuration.baseUrl = "https://depacc-front-dev.herokuapp.com/consumer";
         open(URL_CONSUMER_SIGNIN);
         $(By.id("email")).setValue(s1);
         $(By.id("password")).setValue(s2).pressEnter();
     }
 
-/*Блок открытия определнных разделов меню*/
+    /*Выход из аккаунта*/
+    public void signOut() {
+        BUTTON_MENU_CONSUMER.click();
+        $(By.xpath("//section[contains(@class, 'header__desktop')]//input[@value='Выход']")).click();
+        $(By.cssSelector("button[class*='primary']")).click();
+    }
 
+    /*Блок открытия определнных разделов меню*/
+    public void openOffers() {
+        $(By.cssSelector("input[value='Предложения']")).click();
+    }
+    public void openMyDepaccs() {
+        $(By.cssSelector("input[value='Мои депаки']")).click();
+    }
     public void openMyCoupons() {
-        $(By.cssSelector("input[value='Мои подарки']")).click();
+        $(By.cssSelector("input[value='Мои купоны']")).click();
     }
     public void openMessages() {
         $(By.cssSelector("input[class*='notifications']")).click();
     }
 
-    public void openOperationHistory() {
+    public void openMyProfile() {
+        BUTTON_MENU_CONSUMER.click();
+        $(By.xpath("//section[contains(@class, 'header__desktop')]//input[@value='Мой профиль']")).click();
+    }
+    public void openOperationsHistory() {
+        BUTTON_MENU_CONSUMER.click();
         $(By.xpath("//section[contains(@class, 'header__desktop')]//input[@value='История операций']")).click();
     }
-
-    /*Выход из аккаунта*/
-    public void singOut(){
+    public void openSettings() {
         BUTTON_MENU_CONSUMER.click();
-        $(By.xpath("//section[contains(@class, 'header__desktop')]//input[contains(@value, 'Выход')]")).click();
-        $(By.cssSelector("button[class*='primary']")).click();
+        $(By.xpath("//section[contains(@class, 'header__desktop')]//input[@value='Настройки']")).click();
     }
+
+
 
     /*Округление дробного числа до двух знаков*/
-    public double roundDouble (double d) {
-        d = d*100;
+    public double roundDouble(double d) {
+        d = d * 100;
         int i = (int) Math.round(d);
-        return (double) i/100;
+        return (double) i / 100;
     }
 
-    public void setCouponsFilter(String name){
+
+
+    public void setCouponsFilter(String name) {
         $(By.cssSelector("button[class*='filter']")).click();
         $(By.cssSelector("button[class='filters__btn-top']")).click();
-        $(By.xpath("//li[contains(text(), '"+name+"')]")).click();
+        $(By.xpath("//li[contains(text(), '" + name + "')]")).click();
     }
 
-    /*Получение стоимости оффера*/
-    public double getOfferAmmount() {
-        sleep(1000);
-        double amount = roundDouble(Double.parseDouble($(By.cssSelector("span[class='offer-current__amount']")).innerText()));
-        System.out.println("Стоимость оффера = "+amount);
-        return amount;
-    }
 
-    /*Получение суммы депака*/
-    public double getDepaccAmmount() {
-        sleep(1000);
-        double amount = Double.parseDouble($(By.cssSelector("span[class='offer-current-accepted__amount']")).innerText());
-        return roundDouble (amount);
-    }
 
-    /*Получение суммы баланса определенной валюты*/
-    public double getBalance(String s) {
-        $(By.cssSelector("button[class*='profile-consumer']"), 1).click();
-        double balance = 0.0;
-        int size = $$(By.cssSelector("li[class='profile-info__amount']")).size() / 2;
-        for (int i = 0; i < size; i++) {
-            String balance2 = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
-            if (balance2.contains(s)) {
-                balance = Double.parseDouble(balance2.replace(" " + s, ""));
-                break;
-            }
-        }
-        return balance;
-    }
-
-    /*Получение суммы баланса всех доступных валют*/
-    public double[] getTotalBalance() {
-        BUTTON_MENU_CONSUMER.click();
-        sleep(1000);
-        int size = CURRENCIES.size();
-        System.out.println("Количество валют = "+size);
-        double[] balance = new double[size];
-        for (int i = 0; i < size; i++) {
-            String total = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
-            balance [i] = roundDouble(Double.parseDouble(total.substring(0,total.indexOf(' '))));
-            System.out.println(balance [i]);
-        }
-        return balance;
-    }
-
-    /*Открытие оффера по названию (без использование поля "Поиск")*/
+    /*Открытие оффера по названию (без использования поля "Поиск")*/
     public void openOfferByName(String s) {
         $(By.cssSelector("input[class*='menu__item-link']"), 0).click();
         SelenideElement offer = $(By.xpath("//h2[contains(text(), '" + s + "')]/parent::div/preceding-sibling::div"));
@@ -143,7 +129,14 @@ public class ConsumerMenu {
         sleep(1000);
         $(By.cssSelector("div[class='offer__photo-wrapper offers__item-photo-wrapper']")).click();
     }
-    /*Открытие депака по названию*/
+
+    public void searchDepacc(String s) {
+        $(By.cssSelector("input[type='search']")).setValue(s);
+        sleep(1000);
+        $(By.cssSelector("button[class*='depacc-link']")).click();
+    }
+
+    /*УСТАРЕВАШАЯ ФУНКЦИЯ (ИЗМЕНЕН ДИЗАЙН ДЕПАКОВ) Открытие депака по названию (без использования поля "Поиск")*/
     public void openDepaccByName(String s) {
         $(By.cssSelector("input[class*='menu__item-link']"), 1).click();
         SelenideElement offer = $(By.xpath("//h2[contains(text(), '" + s + "')]/parent::div/preceding-sibling::div"));
@@ -157,48 +150,126 @@ public class ConsumerMenu {
     }
 
     /*Частичное подтверждение регистрации*/
-    public void confirmRegistration(){
-        //Подтверждение регистрации по ссылке на почте
+    public void confirmRegistration() {
         Gmail gmail = new Gmail();
         gmail.login();
-        gmail.openUnreadEmailBySubject("Подтверждение регистрации");
-        $(By.xpath("//a[contains(text(), 'Подтвердить мой аккаунт')]")).click();
+        gmail.openUnreadEmailBySubject(MAIL_CONFIRMATION_TITLE);
+        $(By.xpath("//a[contains(text(), '"+MAIL_CONFIRMATION_LINK+"')]")).click();
         //Удаление всех писем (для корректной работы все лишние письма должны удаляться)
         switchTo().window(0);
-        gmail.deteleAllEmails();
+      //  gmail.deteleAllEmails();
         switchTo().window(1);
     }
 
-    /*Блок проверок*/
-    /*Проверка раздела "История операций"*/
-    public void checkOperationsHistory(String title, String sender, String recipient, double amount, String currency){
-        open("/deposit_transactions");
-        //Проверка названия операции
-        $(By.cssSelector("span[class*='transaction-item__title']")).shouldHave(Condition.text(title));
-        //Проверка отправителя операции
-        $(By.cssSelector("span[class='transaction-item__name']")).shouldHave(Condition.text(sender));
-        //Проверка получателя операции
-        $(By.cssSelector("span[class='transaction-item__name']"),1).shouldHave(Condition.text(recipient));
-        //Проверка суммы операции
-        if(amount>0) {
-            $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(String.valueOf(amount)));
-        }else{
-            $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text((String.valueOf(amount)).substring(0,1)));
+    /*Блок получения данных*/
+    /*Получение стоимости оффера*/
+    public double getOfferAmmount() {
+        sleep(1000);
+        double amount = roundDouble(Double.parseDouble($(By.cssSelector("span[class='offer-current__amount']")).innerText()));
+        System.out.println("Стоимость оффера = " + amount);
+        return amount;
+    }
+
+    /*Получение суммы депака*/
+    public double getDepaccAmmount() {
+        sleep(1000);
+        double amount = Double.parseDouble($(By.cssSelector("span[class='offer-current-accepted__amount']")).innerText());
+        return roundDouble(amount);
+    }
+
+    public String getDepaccCurrency() {
+        String currency = ($(By.cssSelector("span[class*='currency']")).innerText());
+        System.out.println("Валюта депака = " + currency);
+        return currency;
+    }
+
+    /*Получение суммы баланса определенной валюты*/
+    public double getBalance(String s) {
+        $(By.cssSelector("button[class*='profile-consumer']"), 1).click();
+        double balance = 0.0;
+        int size = $$(By.cssSelector("li[class='profile-info__amount']")).size() / 2;
+        for (int i = 0; i < size; i++) {
+            String balance2 = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
+            if (balance2.contains(s)) {
+                balance = Double.parseDouble(balance2.replace(" " + s, ""));
+                break;
+            }
         }
-        //Проверка валюты операции
+        return roundDouble(balance);
+    }
+
+    /*Получение суммы баланса всех доступных валют*/
+    public double[] getTotalBalance() {
+        BUTTON_MENU_CONSUMER.click();
+        sleep(1000);
+        int size = CURRENCIES.size();
+        System.out.println("Количество валют = " + size);
+        double[] balance = new double[size];
+        for (int i = 0; i < size; i++) {
+            String total = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
+            balance[i] = roundDouble(Double.parseDouble(total.substring(0, total.indexOf(' '))));
+            System.out.println(balance[i]);
+        }
+        return balance;
+    }
+
+    /*Получение текущенй даты в формате дд.мм.гггг*/
+    public String getDate() {
+        Date dateGeneral = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        String date = dateFormat.format(dateGeneral);
+        return (date);
+    }
+
+    /*Блок проверок*/
+    //Проверка раздела "История операций"
+    public void checkOperationsHistory(String title, String sender, String recipient, String date, double amount, String currency) {
+        openOperationsHistory();
+        //1. Проверка названия операции
+        $(By.cssSelector("span[class*='transaction-item__title']")).shouldHave(Condition.text(title));
+        //2. Проверка отправителя
+        $(By.cssSelector("span[class='transaction-item__name']")).shouldHave(Condition.text(sender));
+        //3. Проверка получателя
+        $(By.cssSelector("span[class='transaction-item__name']"), 1).shouldHave(Condition.text(recipient));
+        //4. Проверка даты
+        $(By.cssSelector("span[class*='date']")).shouldHave(Condition.text(date));
+        //5. Проверка суммы
+        if (amount > 0) {
+            $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(String.valueOf(amount)));
+        } else {
+            $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text((String.valueOf(amount)).substring(0, 1)));
+        }
+        //6. Проверка валюты
         $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(currency));
     }
 
-    /*Проверка раздела "Сообщения"*/
-    public void checkMessages(String title, double amount, String currency){
-        open("/notifications");
-        //Проверка заголовка операции
+    //Проверка раздела "Сообщения"
+    public void checkMessages(String title, String date, double amount, String currency) {
+        openMessages();
+        //1. Проверка заголовка
         $(By.cssSelector("p[class='notification-item__message']")).shouldHave(Condition.text(title));
-        //Проверка суммы операции
-        $(By.cssSelector("span[class*='notification-item__amount']")).shouldHave(Condition.text(String.valueOf(amount)));
-        //Проверка валюты операции
+        //2. Проверка даты
+        $(By.cssSelector("p[class*='date']")).shouldHave(Condition.text(date));
+        //3. Проверка суммы
+        if (amount > 0) {
+            $(By.cssSelector("span[class*='notification-item__amount']")).shouldHave(Condition.text(String.valueOf(amount)));
+        } else {
+            $(By.cssSelector("span[class*='notification-item__amount']")).shouldNotBe(Condition.visible);
+        }
+        //4. Проверка валюты
         $(By.cssSelector("p[class*='notification-item__amount-wrapper']")).shouldHave(Condition.text(currency));
+    }
 
+    //Проверка уведомлений на почте
+    public void checkNotification(String title, String message){
+        Gmail gmail = new Gmail();
+        gmail.login();
+        gmail.openUnreadEmailBySubject(title);
+        //1. Проверка заголовка
+        $(By.cssSelector("h2[class='hP']")).should(Condition.have(Condition.text(title)));
+        //2. Проверка текста
+        $(By.xpath("//p[contains(text(), '"+message+"')]")).shouldBe(Condition.visible);
+        gmail.deteleAllEmails();
     }
 
 }

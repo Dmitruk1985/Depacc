@@ -14,7 +14,7 @@ public class CreateNewOffer_Type2 {
     @Test
     public void createNewOffer() {
         BusinessMenu business = new BusinessMenu();
-        business.loginBusiness();
+        business.login();
         open("/offer/create");
         //загрузка изображения офера
         $(By.cssSelector("button[class*='offer-create']")).click();
