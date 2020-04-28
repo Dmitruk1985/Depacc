@@ -1,7 +1,6 @@
 package Belhard.Consumer;
 
 import Belhard.ConsumerMenu;
-import com.codeborne.selenide.Configuration;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
@@ -15,9 +14,8 @@ public class BuyOfferAsEmployeeTest {
     @Test
     /*Покупка оффера на условиях для сотрудника*/
     public void BuyOfferAsEmployee() {
-        Configuration.holdBrowserOpen = true;
         ConsumerMenu consumer = new ConsumerMenu();
-        consumer.loginConsumerByDefault();
+        consumer.loginByDefault();
         double[] oldTotalBalance = consumer.getTotalBalance();
         consumer.searchOfferByName(DEFAULT_OFFER_NAME);
         double amount = consumer.getOfferAmmount();
@@ -40,7 +38,7 @@ public class BuyOfferAsEmployeeTest {
             Assertions.assertEquals(0, (oldTotalBalance[i] - newTotalBalance[i]));
         }
         //2. Проверка истории операций
-        BUTTON_MENU_CONSUMER.click(); //??? Эта строка нужна, чтобы открылась история операций
+        BUTTON_MENU_CONSUMER.click(); //??? Костыль, чтобы открылась история операций (по идее, эта строка не нужна, нажатие на кнопку происходит внутри метода)
         consumer.checkOperationsHistory(HISTORY_BUY_OFFER_AS_EMPLOYEE, BUSINESS_NAME, CONSUMER_NAME, date, amount,currency);
         //3. Проверка раздела "Сообщения"
         consumer.checkMessages(MESSAGE_NEW_DEPACC,date,amount,currency);

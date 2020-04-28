@@ -11,11 +11,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CouponTransferTest {
     @Test
+    /*Трансфер купона*/
     public void couponTransfer() {
-       // Configuration.holdBrowserOpen = true;
         Configuration.browserSize="1400x1400"; //Этот параметр нужен, чтобы были видны кнопки у купона
         ConsumerMenu consumer = new ConsumerMenu();
-        consumer.loginConsumerByDefault();
+        consumer.loginByDefault();
         consumer.openMyCoupons();
         consumer.setCouponsFilter(BUSINESS_NAME);
         $(By.cssSelector("button[class*='transfer']")).click();

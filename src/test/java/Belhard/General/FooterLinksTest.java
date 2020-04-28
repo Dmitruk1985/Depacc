@@ -18,7 +18,7 @@ public class FooterLinksTest {
         for (int i = 0; i < 3; i++) {
             if (i == 1) {
                 ConsumerMenu consumer = new ConsumerMenu();
-                consumer.loginConsumerByDefault();
+                consumer.loginByDefault();
             }
             if (i == 2) {
                 BusinessMenu business = new BusinessMenu();

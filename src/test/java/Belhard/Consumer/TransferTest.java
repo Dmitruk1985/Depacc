@@ -15,7 +15,7 @@ public class TransferTest {
     public void transferOffer(){
 
         ConsumerMenu consumer = new ConsumerMenu();
-        consumer.loginConsumerByDefault();
+        consumer.loginByDefault();
         double[] oldTotalBalance = consumer.getTotalBalance();
         consumer.openDepaccByName(DEFAULT_OFFER);
         double oldAmount = consumer.getDepaccAmmount();
