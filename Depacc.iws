@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6f51b71f-1d10-4aa1-9abd-2b01b2bdc9ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Depacc.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Business/CreateNewOffer_Type1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Business/CreateNewOffer_Type1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/Gmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/Gmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponReleaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponReleaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponTransferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponTransferTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/TransferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/TransferTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/General/FooterLinksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/General/FooterLinksTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CreateNewConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CreateNewConsumerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,7 +286,7 @@
       <recent name="Belhard.Business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CouponReleaseTest.couponRelease">
+  <component name="RunManager" selected="JUnit.BuyOfferAsEmployeeTest.BuyOfferAsEmployee">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -305,27 +303,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BuyOfferAsClientTest.buyOfferAsClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Depacc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Belhard.Consumer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
-      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.BuyOfferAsClientTest" />
-      <option name="METHOD_NAME" value="buyOfferAsClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BuyOfferAsEmployeeTest.BuyOfferAsEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Depacc" />
       <extension name="coverage">
@@ -338,6 +315,26 @@
       <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.BuyOfferAsEmployeeTest" />
       <option name="METHOD_NAME" value="BuyOfferAsEmployee" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouponReleaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Depacc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Belhard.Consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
+      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CouponReleaseTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -368,7 +365,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CouponTransferTest.couponTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateNewConsumerTest.createNewConsumer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Depacc" />
       <extension name="coverage">
         <pattern>
@@ -377,8 +374,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Belhard.Consumer" />
-      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CouponTransferTest" />
-      <option name="METHOD_NAME" value="couponTransfer" />
+      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CreateNewConsumerTest" />
+      <option name="METHOD_NAME" value="createNewConsumer" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -423,11 +420,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CouponReleaseTest.couponRelease" />
-        <item itemvalue="JUnit.BuyOfferAsClientTest.buyOfferAsClient" />
-        <item itemvalue="JUnit.CouponTransferTest.couponTransfer" />
         <item itemvalue="JUnit.BuyOfferAsEmployeeTest.BuyOfferAsEmployee" />
         <item itemvalue="JUnit.UnitTest.test" />
+        <item itemvalue="JUnit.CreateNewConsumerTest.createNewConsumer" />
+        <item itemvalue="JUnit.CouponReleaseTest.couponRelease" />
+        <item itemvalue="JUnit.CouponReleaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -540,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587996152341</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Second try">
+      <created>1588078824151</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588078824151</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -651,30 +655,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583754565172" />
-    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1587996151149">
+    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1588078822786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587996151149" />
+    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588078822786" />
     <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1583927554149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583927554149" />
-    <state width="1703" height="239" key="GridCell.Tab.0.bottom" timestamp="1588078579391">
+    <state width="1702" height="239" key="GridCell.Tab.0.bottom" timestamp="1588168618607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1703" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588078579391" />
-    <state width="1703" height="239" key="GridCell.Tab.0.center" timestamp="1588078579391">
+    <state width="1702" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588168618607" />
+    <state width="1702" height="239" key="GridCell.Tab.0.center" timestamp="1588168618607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1703" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588078579391" />
-    <state width="1703" height="239" key="GridCell.Tab.0.left" timestamp="1588078579390">
+    <state width="1702" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588168618607" />
+    <state width="1702" height="239" key="GridCell.Tab.0.left" timestamp="1588168618606">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1703" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588078579390" />
-    <state width="1703" height="239" key="GridCell.Tab.0.right" timestamp="1588078579391">
+    <state width="1702" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588168618606" />
+    <state width="1702" height="239" key="GridCell.Tab.0.right" timestamp="1588168618607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1703" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588078579391" />
+    <state width="1702" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588168618607" />
     <state width="938" height="264" key="GridCell.Tab.1.bottom" timestamp="1587650508846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -699,10 +703,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583394837650" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1587996161513">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1588078833995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587996161513" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588078833995" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580902131587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

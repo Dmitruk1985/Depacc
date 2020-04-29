@@ -26,24 +26,30 @@ public class ConsumerMenu {
     public static final String PASSWORD = "Qwerty1234567";
     public static final SelenideElement BUTTON_MENU_CONSUMER = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-consumer')]"));
     public static final ElementsCollection CURRENCIES = $$(By.xpath("//section[contains(@class, 'header__desktop')]//li[@class='profile-info__amount']"));
+    public static final String NO_OPEN_DEPOSITE = "Отсутствует открытый депозит";
+    public static final String NO_OPERATIONS = "Операций пока нет";
+    public static final String NO_DEPACCS = "Депаков пока нет";
+    public static final String NO_COUPONS = "Купонов не найдено";
+    public static final String NO_MESSAGES = "Новых уведомлений нет, вернуться на страницу предложений";
 
     /*Блок названий записей в разделе "История операций"*/
     public static final String HISTORY_BUY_OFFER_AS_CLIENT = "Оплаченная оферта";
     public static final String HISTORY_BUY_OFFER_AS_EMPLOYEE = "Оферта в долг";
     public static final String HISTORY_COUPON_TRANSFER = "Трансфер купона";
+    public static final String HISTORY_COUPON_RELEASE = "Использование купона";
 
     /*Блок названий записей в разделе "Сообщения"*/
     public static final String MESSAGE_NEW_DEPACC = "Вы открыли новый депак";
     public static final String MESSAGE_COUPON_TRANSFER = "Вы получили трансфер купона";
+    public static final String MESSAGE_COUPON_RELEASE = "успешно реализован";
 
     /*Блок названий в уведомлениях на почте*/
     public static final String MAIL_CONFIRMATION_TITLE = "Подтверждение регистрации";
     public static final String MAIL_CONFIRMATION_LINK = "Подтвердить мой аккаунт";
     public static final String MAIL_NEW_DEPACC = "Новый депак";
+    public static final String MAIL_COUPON_RELEASE = "Реализация купона";
 
-    /**
-     * Блок функций входа и выхода из аккаунта
-     **/
+    /**Блок функций входа и выхода из аккаунта**/
     /*Вход в аккаунт с данными по умолчанию*/
     public void loginByDefault() {
         Configuration.baseUrl = "https://depacc-front-dev.herokuapp.com/consumer";
@@ -58,6 +64,13 @@ public class ConsumerMenu {
         open(URL_CONSUMER_SIGNIN);
         $(By.id("email")).setValue(s1);
         $(By.id("password")).setValue(s2).pressEnter();
+    }
+    /*Логин через Google*/
+    public void loginByGoogle(){
+        open(URL_CONSUMER_SIGNIN);
+        $(By.cssSelector("img[alt='google']")).click();
+        $(By.id("identifierId")).setValue(EMAIL_CONSUMER).pressEnter();
+        $(By.name("password")).setValue(PASSWORD).pressEnter();
     }
 
     /*Выход из аккаунта*/
@@ -160,9 +173,9 @@ public class ConsumerMenu {
         gmail.login();
         gmail.openUnreadEmailBySubject(MAIL_CONFIRMATION_TITLE);
         $(By.xpath("//a[contains(text(), '" + MAIL_CONFIRMATION_LINK + "')]")).click();
-        //Удаление всех писем (для корректной работы все лишние письма должны удаляться)
         switchTo().window(0);
-        //  gmail.deteleAllEmails();
+        //Удаление всех писем (для корректной работы все лишние письма должны удаляться)
+        gmail.deteleAllEmails();
         switchTo().window(1);
     }
 

@@ -2,7 +2,6 @@ package Belhard.Consumer;
 
 import Belhard.ConsumerMenu;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
@@ -10,14 +9,13 @@ import org.openqa.selenium.By;
 import static Belhard.BusinessMenu.BUSINESS_NAME;
 import static Belhard.BusinessMenu.DEFAULT_OFFER_NAME;
 import static Belhard.ConsumerMenu.*;
-import static Belhard.ConsumerMenu.MESSAGE_NEW_DEPACC;
 import static com.codeborne.selenide.Selenide.$;
 
 public class BuyOfferAsClientTest {
     @Test
     /*Покупка оффера за реальные деньги (оплата картой)*/
     public void buyOfferAsClient() {
-        Configuration.holdBrowserOpen = true;
+       // Configuration.holdBrowserOpen = true;
         ConsumerMenu consumer = new ConsumerMenu();
         consumer.loginByDefault();
         double[] oldTotalBalance = consumer.getTotalBalance();

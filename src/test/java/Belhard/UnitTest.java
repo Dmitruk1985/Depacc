@@ -3,9 +3,7 @@ package Belhard;
 import com.codeborne.selenide.Configuration;
 import org.junit.Test;
 
-import static Belhard.BusinessMenu.BUSINESS_NAME;
-import static Belhard.ConsumerMenu.CONSUMER_NAME;
-import static Belhard.ConsumerMenu.HISTORY_BUY_OFFER_AS_EMPLOYEE;
+import static Belhard.ConsumerMenu.BUTTON_MENU_CONSUMER;
 
 
 public class UnitTest {
@@ -14,9 +12,8 @@ public class UnitTest {
     public void test() {
         Configuration.holdBrowserOpen = true;
         ConsumerMenu consumer = new ConsumerMenu();
-        consumer.loginByDefault();
-        consumer.openOperationsHistory();
-        String date=consumer.getDate();
-        consumer.checkOperationsHistory(HISTORY_BUY_OFFER_AS_EMPLOYEE, BUSINESS_NAME, CONSUMER_NAME, date, 10.0,"BYN");
+        consumer.loginByGoogle();
+        BUTTON_MENU_CONSUMER.click();
+
     }
 }
