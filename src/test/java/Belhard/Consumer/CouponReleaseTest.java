@@ -26,8 +26,8 @@ public class CouponReleaseTest {
         /*Ожидание сканирования QR-кода*/
         sleep(10000);
         switchTo().window(0);
-        $(By.cssSelector("input[class*='submit']")).click();
-        $(By.cssSelector("input[class='modal__btn ']")).click();
+        SUBMIT_BUTTON.click();
+        MODAL_BUTTON.click();
         switchTo().window(1);
         $(By.cssSelector("button[class*='progress-page']")).click();
         String date=consumer.getDate();
@@ -39,7 +39,7 @@ public class CouponReleaseTest {
         switchTo().window(0);
         consumer.checkOperationsHistory(HISTORY_COUPON_RELEASE, BUSINESS_NAME, CONSUMER_NAME, date, 0, "BYN");
         //3. Проверка сообщений у Пользователя
-        consumer.checkMessages(MESSAGE_COUPON_RELEASE,date,0,"");
+        consumer.checkMessages(MESSAGE_COUPON_RELEASE,date,0,""); //??? Возможно, баг. Сообщения не всегда приходят.
         //4. Проверка уведомления на почте Пользователя
         consumer.checkNotification(MAIL_COUPON_RELEASE,MESSAGE_COUPON_RELEASE);
 

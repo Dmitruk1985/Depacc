@@ -1,12 +1,12 @@
 package Belhard.Consumer;
 
+import Belhard.BusinessMenu;
 import Belhard.ConsumerMenu;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 
-import static Belhard.BusinessMenu.BUSINESS_NAME;
-import static Belhard.BusinessMenu.DEFAULT_OFFER_NAME;
+import static Belhard.BusinessMenu.*;
 import static Belhard.ConsumerMenu.*;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -23,7 +23,7 @@ public class BuyOfferAsEmployeeTest {
         $(By.cssSelector("div[class*='form-toggle__switch']")).click();
         $(By.cssSelector("input[class*='btn-open']")).click();
         $(By.cssSelector("input[class*='btn--open']")).click();
-        $(By.cssSelector("input[class='modal__btn ']")).click(); //Здесь лишний пробел, изменить после исправления
+        MODAL_BUTTON.click();
         String currency=consumer.getDepaccCurrency();
         double[] newTotalBalance = consumer.getTotalBalance();
         String date=consumer.getDate();
@@ -37,13 +37,17 @@ public class BuyOfferAsEmployeeTest {
         for (int i = 1; i < size; i++) {
             Assertions.assertEquals(0, (oldTotalBalance[i] - newTotalBalance[i]));
         }
-        //2. Проверка истории операций
-        BUTTON_MENU_CONSUMER.click(); //??? Костыль, чтобы открылась история операций (по идее, эта строка не нужна, нажатие на кнопку происходит внутри метода)
+        //2. Проверка истории операций у Пользователя
         consumer.checkOperationsHistory(HISTORY_BUY_OFFER_AS_EMPLOYEE, BUSINESS_NAME, CONSUMER_NAME, date, amount,currency);
-        //3. Проверка раздела "Сообщения"
+        //3. Проверка раздела "Сообщения" у Пользователя
         consumer.checkMessages(MESSAGE_NEW_DEPACC,date,amount,currency);
-        //4. Проверка уведомления на почте
-        consumer.checkNotification(MAIL_NEW_DEPACC,MESSAGE_NEW_DEPACC);
+        consumer.signOut();
+        //4. Проверка истории операций у Бизнеса
+        BusinessMenu business = new BusinessMenu();
+        business.login();
+        business.checkOperationsHistory(HISTORY_BUY_OFFER_AS_EMPLOYEE, BUSINESS_NAME, CONSUMER_NAME, date, amount,currency);
+        //5. Проверка уведомлений на почте Пользователя и Бизнеса
+        consumer.checkNotifications(MAIL_NEW_DEPACC,MAIL_NEW_DEPACC_BUSINESS,MESSAGE_NEW_DEPACC);
 
     }
 }

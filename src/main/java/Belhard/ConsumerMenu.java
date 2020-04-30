@@ -18,6 +18,7 @@ public class ConsumerMenu {
     public static final String URL_LANDING = "https://depacc-front-dev.herokuapp.com";
     public static final String EMAIL_CONSUMER = "automation.testing.depacc@gmail.com";
     public static final String EMAIL_CONSUMER_TEST = "automation.testing.depacc+consumer1@gmail.com";
+    public static final String EMAIL_CONSUMER_TEST_2 = "automation.testing.depacc+consumer2@gmail.com";
     public static final double CHARGE_AMOUNT = 0.01;
     public static final double TRANSFER_AMOUNT = 0.01;
     public static final String DEFAULT_OFFER = "Automatic offer Type 1";
@@ -25,6 +26,8 @@ public class ConsumerMenu {
     public static final String CONSUMER_TEST_NAME = "Automatic Auxiliary User";
     public static final String PASSWORD = "Qwerty1234567";
     public static final SelenideElement BUTTON_MENU_CONSUMER = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-consumer')]"));
+    public static final SelenideElement MODAL_BUTTON = $(By.cssSelector("input[class='modal__btn ']"));
+    public static final SelenideElement SUBMIT_BUTTON = $(By.cssSelector("input[class*='submit']"));
     public static final ElementsCollection CURRENCIES = $$(By.xpath("//section[contains(@class, 'header__desktop')]//li[@class='profile-info__amount']"));
     public static final String NO_OPEN_DEPOSITE = "Отсутствует открытый депозит";
     public static final String NO_OPERATIONS = "Операций пока нет";
@@ -36,20 +39,27 @@ public class ConsumerMenu {
     public static final String HISTORY_BUY_OFFER_AS_CLIENT = "Оплаченная оферта";
     public static final String HISTORY_BUY_OFFER_AS_EMPLOYEE = "Оферта в долг";
     public static final String HISTORY_COUPON_TRANSFER = "Трансфер купона";
+    public static final String HISTORY_DEPACC_TRANSFER = "Трансфер оферты";
     public static final String HISTORY_COUPON_RELEASE = "Использование купона";
 
     /*Блок названий записей в разделе "Сообщения"*/
     public static final String MESSAGE_NEW_DEPACC = "Вы открыли новый депак";
     public static final String MESSAGE_COUPON_TRANSFER = "Вы получили трансфер купона";
     public static final String MESSAGE_COUPON_RELEASE = "успешно реализован";
+    public static final String MESSAGE_DEPACC_TRANSFER = "Вы получили трансфер";
 
     /*Блок названий в уведомлениях на почте*/
     public static final String MAIL_CONFIRMATION_TITLE = "Подтверждение регистрации";
     public static final String MAIL_CONFIRMATION_LINK = "Подтвердить мой аккаунт";
     public static final String MAIL_NEW_DEPACC = "Новый депак";
     public static final String MAIL_COUPON_RELEASE = "Реализация купона";
+    public static final String MAIL_PASSWORD_RECOVERY = "Восстановление пароля";
+    public static final String MAIL_CHANGE_PASSWORD = "Изменить пароль";
+    public static final String MAIL_DEPACC_TRANSFER = "Трансфер депозита";
 
-    /**Блок функций входа и выхода из аккаунта**/
+    /**
+     * Блок функций входа и выхода из аккаунта
+     **/
     /*Вход в аккаунт с данными по умолчанию*/
     public void loginByDefault() {
         Configuration.baseUrl = "https://depacc-front-dev.herokuapp.com/consumer";
@@ -65,12 +75,21 @@ public class ConsumerMenu {
         $(By.id("email")).setValue(s1);
         $(By.id("password")).setValue(s2).pressEnter();
     }
+
     /*Логин через Google*/
-    public void loginByGoogle(){
+    public void loginByGoogle() {
         open(URL_CONSUMER_SIGNIN);
         $(By.cssSelector("img[alt='google']")).click();
         $(By.id("identifierId")).setValue(EMAIL_CONSUMER).pressEnter();
         $(By.name("password")).setValue(PASSWORD).pressEnter();
+    }
+
+    /*Логин через vk.com*/
+    public void loginByVK() {
+        open(URL_CONSUMER_SIGNIN);
+        $(By.cssSelector("img[alt='vk']")).click();
+        $(By.name("email")).setValue(EMAIL_CONSUMER);
+        $(By.name("pass")).setValue("QWerty1234567").pressEnter();
     }
 
     /*Выход из аккаунта*/
@@ -237,6 +256,7 @@ public class ConsumerMenu {
             balance[i] = roundDouble(Double.parseDouble(total.substring(0, total.indexOf(' '))));
             System.out.println(balance[i]);
         }
+        BUTTON_MENU_CONSUMER.click();
         return balance;
     }
 
@@ -308,4 +328,23 @@ public class ConsumerMenu {
         gmail.deteleAllEmails();
     }
 
+    /*Проверка на почте двух уведомлений в одной ветке (НЕ ВСЕГДА КОРРЕКТНО РАБОТАЕТ, 1. первое письмо может быть свернуто 2. функция удаления писем не работает)*/
+    public void checkNotifications(String title, String message1, String message2) {
+        Gmail gmail = new Gmail();
+        gmail.login();
+        gmail.openUnreadEmailBySubject(title);
+      //  $(By.cssSelector("div[class='iA g6']"),1).click();
+        //1. Проверка заголовка
+        $(By.cssSelector("h2[class='hP']")).should(Condition.have(Condition.text(title)));
+        //2. Проверка текстов
+        $(By.xpath("//p[contains(text(), '" + message1 + "')]")).shouldBe(Condition.visible);
+        $(By.xpath("//p[contains(text(), '" + message2 + "')]")).shouldBe(Condition.visible);
+        gmail.deteleAllEmails();
+    }
+
+    /*Проверка имени пользователя в выпадающем меню (может быть ФИО или емейл)*/
+    public void checkDrodMenu(String name) {
+        BUTTON_MENU_CONSUMER.click();
+        $(By.className("profile-info__name-content"), 1).shouldHave(Condition.text(name));
+    }
 }

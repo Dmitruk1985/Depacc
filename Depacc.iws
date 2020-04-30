@@ -5,10 +5,12 @@
       <change beforePath="$PROJECT_DIR$/Depacc.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Depacc.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/BusinessMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/ConsumerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Belhard/Gmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Belhard/Gmail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/BuyOfferAsEmployeeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponReleaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CouponReleaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CreateNewConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/CreateNewConsumerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/LoginViaSocialTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/PasswordRecoveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/PasswordRecoveryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/TransferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/Consumer/DepaccTransferTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Belhard/UnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -303,6 +305,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BuyOfferAsEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Depacc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Belhard.Consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
+      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.BuyOfferAsEmployeeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BuyOfferAsEmployeeTest.BuyOfferAsEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Depacc" />
       <extension name="coverage">
@@ -315,26 +337,6 @@
       <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.BuyOfferAsEmployeeTest" />
       <option name="METHOD_NAME" value="BuyOfferAsEmployee" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CouponReleaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Depacc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Belhard.Consumer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
-      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CouponReleaseTest" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -365,18 +367,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateNewConsumerTest.createNewConsumer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Depacc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Belhard.Consumer.*" />
+          <option name="PATTERN" value="Belhard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Belhard.Consumer" />
-      <option name="MAIN_CLASS_NAME" value="Belhard.Consumer.CreateNewConsumerTest" />
-      <option name="METHOD_NAME" value="createNewConsumer" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="Belhard" />
+      <option name="MAIN_CLASS_NAME" value="Belhard.UnitTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -421,10 +422,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BuyOfferAsEmployeeTest.BuyOfferAsEmployee" />
+        <item itemvalue="JUnit.BuyOfferAsEmployeeTest" />
         <item itemvalue="JUnit.UnitTest.test" />
-        <item itemvalue="JUnit.CreateNewConsumerTest.createNewConsumer" />
+        <item itemvalue="JUnit.UnitTest" />
         <item itemvalue="JUnit.CouponReleaseTest.couponRelease" />
-        <item itemvalue="JUnit.CouponReleaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -544,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588078824151</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="29.04.2020">
+      <created>1588168896268</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1588168896268</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -564,7 +572,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First try" />
     <MESSAGE value="Second try" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second try" />
+    <MESSAGE value="29.04.2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="29.04.2020" />
   </component>
   <component name="VssConfiguration">
     <CheckoutOptions>
@@ -647,54 +656,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="679" y="226" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583754515248" />
-    <state x="519" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582808995201">
+    <state x="519" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588253957647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="519" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582808995201" />
+    <state x="519" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588253957647" />
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583754565172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583754565172" />
-    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1588078822786">
+    <state x="627" y="118" key="CommitChangelistDialog2" timestamp="1588168895144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588078822786" />
+    <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588168895144" />
     <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1583927554149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583927554149" />
-    <state width="1702" height="239" key="GridCell.Tab.0.bottom" timestamp="1588168618607">
+    <state width="1700" height="239" key="GridCell.Tab.0.bottom" timestamp="1588254576786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1702" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588168618607" />
-    <state width="1702" height="239" key="GridCell.Tab.0.center" timestamp="1588168618607">
+    <state width="1700" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588254576786" />
+    <state width="1700" height="239" key="GridCell.Tab.0.center" timestamp="1588254576786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1702" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588168618607" />
-    <state width="1702" height="239" key="GridCell.Tab.0.left" timestamp="1588168618606">
+    <state width="1700" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588254576786" />
+    <state width="1700" height="239" key="GridCell.Tab.0.left" timestamp="1588254576785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1702" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588168618606" />
-    <state width="1702" height="239" key="GridCell.Tab.0.right" timestamp="1588168618607">
+    <state width="1700" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588254576785" />
+    <state width="1700" height="239" key="GridCell.Tab.0.right" timestamp="1588254576786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1702" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588168618607" />
-    <state width="938" height="264" key="GridCell.Tab.1.bottom" timestamp="1587650508846">
+    <state width="1700" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588254576786" />
+    <state width="938" height="264" key="GridCell.Tab.1.bottom" timestamp="1588254292924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="264" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587650508846" />
-    <state width="938" height="264" key="GridCell.Tab.1.center" timestamp="1587650508846">
+    <state width="938" height="264" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588254292924" />
+    <state width="938" height="264" key="GridCell.Tab.1.center" timestamp="1588254292924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="264" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587650508846" />
-    <state width="938" height="264" key="GridCell.Tab.1.left" timestamp="1587650508846">
+    <state width="938" height="264" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588254292924" />
+    <state width="938" height="264" key="GridCell.Tab.1.left" timestamp="1588254292924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="264" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587650508846" />
-    <state width="938" height="264" key="GridCell.Tab.1.right" timestamp="1587650508846">
+    <state width="938" height="264" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588254292924" />
+    <state width="938" height="264" key="GridCell.Tab.1.right" timestamp="1588254292924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="264" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587650508846" />
+    <state width="938" height="264" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588254292924" />
     <state x="490" y="177" key="Maven.ArtifactSearchDialog" timestamp="1582204695410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -703,10 +712,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583394837650" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1588078833995">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1588168904421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588078833995" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588168904421" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580902131587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

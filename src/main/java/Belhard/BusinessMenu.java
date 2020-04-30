@@ -21,6 +21,8 @@ public class BusinessMenu {
     public static final SelenideElement BUTTON_MENU_BUSINESS = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-business')]"));
     public static final SelenideElement BUTTON_ACCEPT_PAYMENT = $(By.cssSelector("button[class*='page-btn-primary']"));
 
+    public static final String MAIL_NEW_DEPACC_BUSINESS = "Открыт новый Депак";
+
     /**Блок функций входа и выхода из аккаунта**/
     /*Вход в аккаунт с данными по умолчанию*/
     public void login() {
