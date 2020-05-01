@@ -37,6 +37,6 @@ public class PasswordRecoveryTest {
         $(By.id("password")).setValue(newPassword).pressEnter();
         //Проверка входа в аккаунт
         ConsumerMenu consumer = new ConsumerMenu();
-        consumer.checkDrodMenu(EMAIL_CONSUMER_TEST_2);
+        consumer.checkUserName(EMAIL_CONSUMER_TEST_2);
     }
 }

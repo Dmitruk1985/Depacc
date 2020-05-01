@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 
 import java.text.SimpleDateFormat;
@@ -56,6 +57,8 @@ public class ConsumerMenu {
     public static final String MAIL_PASSWORD_RECOVERY = "Восстановление пароля";
     public static final String MAIL_CHANGE_PASSWORD = "Изменить пароль";
     public static final String MAIL_DEPACC_TRANSFER = "Трансфер депозита";
+    public static final String MAIL_PAYMENT_TITLE = "Уведомление об успешной оплате";
+    public static final String MAIL_PAYMENT_MESSAGE = "Ваш платеж был успешным";
 
     /**
      * Блок функций входа и выхода из аккаунта
@@ -251,14 +254,33 @@ public class ConsumerMenu {
         int size = CURRENCIES.size();
         System.out.println("Количество валют = " + size);
         double[] balance = new double[size];
+        String[] currency = new String[size];
         for (int i = 0; i < size; i++) {
             String total = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
             balance[i] = roundDouble(Double.parseDouble(total.substring(0, total.indexOf(' '))));
-            System.out.println(balance[i]);
+            currency[i] = total.substring(total.indexOf(' ') + 1);
+            System.out.println(balance[i] + currency[i]);
         }
         BUTTON_MENU_CONSUMER.click();
         return balance;
     }
+
+    /*Получение индекса нужной валюты*/
+    public int getCurrencyIndex(String currency) {
+        int size = CURRENCIES.size();
+        String[] currency2 = new String[size];
+        int index = 0;
+        for (int i = 1; i < size; i++) {
+            String total = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
+            currency2[i] = total.substring(total.indexOf(' ') + 1);
+            if (currency2[i] == currency) {
+                index = i;
+            }
+        }
+        System.out.println("Индекс валюты = "+index);
+        return(index);
+    }
+
 
     /*Получение текущенй даты в формате дд.мм.гггг*/
     public String getDate() {
@@ -328,6 +350,17 @@ public class ConsumerMenu {
         gmail.deteleAllEmails();
     }
 
+    /*Проверка уведомления на почте без удаления писем*/
+    public void checkSecondNotification(String title, String message) {
+        Gmail gmail = new Gmail();
+        gmail.login();
+        gmail.openUnreadEmailBySubject(title);
+        //1. Проверка заголовка
+        $(By.cssSelector("h2[class='hP']")).should(Condition.have(Condition.text(title)));
+        //2. Проверка текста
+        $(By.xpath("//*[contains(text(), '" + message + "')]")).shouldBe(Condition.visible);
+    }
+
     /*Проверка на почте двух уведомлений в одной ветке (НЕ ВСЕГДА КОРРЕКТНО РАБОТАЕТ, 1. первое письмо может быть свернуто 2. функция удаления писем не работает)*/
     public void checkNotifications(String title, String message1, String message2) {
         Gmail gmail = new Gmail();
@@ -342,9 +375,34 @@ public class ConsumerMenu {
         gmail.deteleAllEmails();
     }
 
+    /*Проверка того, что баланс валют, кроме выбранной, остался неизменным*/
+    public void checkOtherCurrencies(int i, double[] currency1,double[] currency2){
+        int size = CURRENCIES.size();
+        for (int j = 0; j < size; j++) {
+            if (i!=j) {
+                Assertions.assertEquals(0, (currency1[i] - currency2[i]));
+            }
+        }
+    }
+
+    /*Проверка того, что баланс валюты с заданным индексом увеличился на значение amount, а баланс остальных остался неизменным*/
+    public void checkCurrencies(int i, double amount, double[] currency1,double[] currency2){
+        int size = CURRENCIES.size();
+        for (int j = 0; j < size; j++) {
+            if (i!=j) {
+                Assertions.assertEquals(0, (currency1[i] - currency2[i]));
+            }
+            else{
+                Assertions.assertEquals((roundDouble(currency1[i] + amount)), currency2);
+            }
+        }
+    }
+
     /*Проверка имени пользователя в выпадающем меню (может быть ФИО или емейл)*/
-    public void checkDrodMenu(String name) {
+    public void checkUserName(String name) {
         BUTTON_MENU_CONSUMER.click();
         $(By.className("profile-info__name-content"), 1).shouldHave(Condition.text(name));
     }
+
+
 }

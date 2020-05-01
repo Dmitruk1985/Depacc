@@ -22,6 +22,7 @@ public class BusinessMenu {
     public static final SelenideElement BUTTON_ACCEPT_PAYMENT = $(By.cssSelector("button[class*='page-btn-primary']"));
 
     public static final String MAIL_NEW_DEPACC_BUSINESS = "Открыт новый Депак";
+    public static final String HISTORY_NEW_DEPACC_BUSINESS = "Оплаченная оферта";
 
     /**Блок функций входа и выхода из аккаунта**/
     /*Вход в аккаунт с данными по умолчанию*/
