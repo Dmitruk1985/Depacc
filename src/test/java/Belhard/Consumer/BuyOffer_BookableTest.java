@@ -8,40 +8,39 @@ import org.openqa.selenium.By;
 import static Belhard.BusinessMenu.*;
 import static Belhard.ConsumerMenu.*;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.open;
 
-public class BuyOfferAsEmployeeTest {
+public class BuyOffer_BookableTest {
     @Test
-    /*Покупка оффера на условиях для сотрудника*/
-    public void BuyOfferAsEmployee() {
+    /*Бронирование оффера*/
+    public void buyOfferAsClient() {
+       // Configuration.holdBrowserOpen = true;
         ConsumerMenu consumer = new ConsumerMenu();
         consumer.loginByDefault();
         double[] oldTotalBalance = consumer.getTotalBalance();
-        consumer.searchOfferByName(DEFAULT_OFFER_NAME);
+        consumer.searchOfferByName(OFFER_NAME_BOOKABLE);
         double amount = consumer.getOfferAmmount();
-        $(By.cssSelector("span[class*='condition-link']"), 1).click();
-        $(By.cssSelector("div[class*='form-toggle__switch']")).click();
-        $(By.cssSelector("input[class*='btn-open']")).click();
-        $(By.cssSelector("input[class*='btn--open']")).click();
+        String currency = consumer.getOfferCurrency();
+        $(By.cssSelector("input[class*='btn-secondary']")).click();
         MODAL_BUTTON.click();
-        String currency = consumer.getDepaccCurrency();
+        MODAL_BUTTON.click();
+        open(URL_CONSUMER_SIGNIN); //В данный момент происходит переход на гугл форму, поэтому нужно залогиниться повторно, должен быть автологин.
         double[] newTotalBalance = consumer.getTotalBalance();
         String date = consumer.getDate();
-        int size = CURRENCIES.size();
+
 
         /*Блок проверок*/
-        //1. Проверка баланса
-        consumer.checkCurrencies(consumer.getCurrencyIndex(currency), amount, oldTotalBalance, newTotalBalance);
+        //1. Проверка баланса (должен остаться неизменным)
+        consumer.checkBalanceConstant(oldTotalBalance, newTotalBalance);
         //2. Проверка истории операций у Пользователя
-        consumer.checkOperationsHistory(HISTORY_BUY_OFFER_AS_EMPLOYEE, BUSINESS_NAME, CONSUMER_NAME, date, amount, currency);
+        consumer.checkOperationsHistory(HISTORY_BOOKABLE_DEPACC, BUSINESS_NAME, CONSUMER_NAME, date, amount, currency);
         //3. Проверка раздела "Сообщения" у Пользователя
         consumer.checkMessages(MESSAGE_NEW_DEPACC, date, amount, currency);
         //4. Проверка истории операций у Бизнеса
         BusinessMenu business = new BusinessMenu();
         business.login();
-        business.checkOperationsHistory(HISTORY_BUY_OFFER_AS_EMPLOYEE, BUSINESS_NAME, CONSUMER_NAME, date, amount, currency);
+        business.checkOperationsHistory(HISTORY_BOOKABLE_DEPACC, BUSINESS_NAME, CONSUMER_NAME, date, amount, currency);
         //5. Проверка уведомлений на почте Пользователя и Бизнеса
         consumer.checkNotifications(MAIL_NEW_DEPACC, MAIL_NEW_DEPACC_BUSINESS, MESSAGE_NEW_DEPACC);
-        sleep(1000); //Без этой задержки не удаляются письма
     }
 }

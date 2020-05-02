@@ -27,7 +27,7 @@ public class ConsumerMenu {
     public static final String CONSUMER_TEST_NAME = "Automatic Auxiliary User";
     public static final String PASSWORD = "Qwerty1234567";
     public static final SelenideElement BUTTON_MENU_CONSUMER = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-consumer')]"));
-    public static final SelenideElement MODAL_BUTTON = $(By.cssSelector("input[class='modal__btn ']"));
+    public static final SelenideElement MODAL_BUTTON = $(By.cssSelector("input[class*='modal__btn ']"));
     public static final SelenideElement SUBMIT_BUTTON = $(By.cssSelector("input[class*='submit']"));
     public static final ElementsCollection CURRENCIES = $$(By.xpath("//section[contains(@class, 'header__desktop')]//li[@class='profile-info__amount']"));
     public static final String NO_OPEN_DEPOSITE = "Отсутствует открытый депозит";
@@ -42,6 +42,7 @@ public class ConsumerMenu {
     public static final String HISTORY_COUPON_TRANSFER = "Трансфер купона";
     public static final String HISTORY_DEPACC_TRANSFER = "Трансфер оферты";
     public static final String HISTORY_COUPON_RELEASE = "Использование купона";
+    public static final String HISTORY_BOOKABLE_DEPACC = "Бронирование оферты";
 
     /*Блок названий записей в разделе "Сообщения"*/
     public static final String MESSAGE_NEW_DEPACC = "Вы открыли новый депак";
@@ -58,7 +59,7 @@ public class ConsumerMenu {
     public static final String MAIL_CHANGE_PASSWORD = "Изменить пароль";
     public static final String MAIL_DEPACC_TRANSFER = "Трансфер депозита";
     public static final String MAIL_PAYMENT_TITLE = "Уведомление об успешной оплате";
-    public static final String MAIL_PAYMENT_MESSAGE = "Ваш платеж был успешным";
+    public static final String MAIL_PAYMENT_MESSAGE = "Здравствуйте";
 
     /**
      * Блок функций входа и выхода из аккаунта
@@ -72,7 +73,7 @@ public class ConsumerMenu {
     }
 
     /*Вход в аккаунт с определенными данными*/
-    public void loginConsumerByData(String s1, String s2) {
+    public void loginByData(String s1, String s2) {
         Configuration.baseUrl = "https://depacc-front-dev.herokuapp.com/consumer";
         open(URL_CONSUMER_SIGNIN);
         $(By.id("email")).setValue(s1);
@@ -109,6 +110,11 @@ public class ConsumerMenu {
 
     public void openMyDepaccs() {
         $(By.cssSelector("input[value='Мои депаки']")).click();
+    }
+
+    public void openBookedDepaccs() {
+        openMyDepaccs();
+        $(By.cssSelector("a[class*='unpublished']")).click();
     }
 
     public void openMyCoupons() {
@@ -170,20 +176,21 @@ public class ConsumerMenu {
         $(By.cssSelector("div[class='offer__photo-wrapper offers__item-photo-wrapper']")).click();
     }
 
+    /*Поиск депака (по полю "Описание")*/
     public void searchDepacc(String s) {
         $(By.cssSelector("input[type='search']")).setValue(s);
         sleep(1000);
         $(By.cssSelector("button[class*='depacc-link']")).click();
     }
 
-    /*УСТАРЕВАШАЯ ФУНКЦИЯ (ИЗМЕНЕН ДИЗАЙН ДЕПАКОВ) Открытие депака по названию (без использования поля "Поиск")*/
-    public void openDepaccByName(String s) {
-        $(By.cssSelector("input[class*='menu__item-link']"), 1).click();
-        SelenideElement offer = $(By.xpath("//h2[contains(text(), '" + s + "')]/parent::div/preceding-sibling::div"));
+    /*Открыть депак, у которого активна функция "Трансфер"*/
+    public void openDepaccWithTransfer() {
+        openMyDepaccs();
+        SelenideElement transferButton = $(By.xpath("//button[@class='transfer__btn-card-white']/ancestor::div[@class='offers-accepted__item-wrapper']//button[@class='offer-accepted-card__depacc-link']"));
         for (int i = 0, j = 1; i < j; i++, j++) {
-            $(By.cssSelector("div[class='offer-accepted__photo-wrapper']"), i).scrollTo();
-            if (offer.isDisplayed()) {
-                offer.click();
+            $(By.cssSelector("div[class='offers-accepted__item-wrapper']"), i).scrollTo();
+            if (transferButton.isDisplayed()) {
+                transferButton.click();
                 break;
             }
         }
@@ -199,6 +206,13 @@ public class ConsumerMenu {
         //Удаление всех писем (для корректной работы все лишние письма должны удаляться)
         gmail.deteleAllEmails();
         switchTo().window(1);
+    }
+
+    /*Ввод и подтреждение пароля*/
+    public void confirmPassword(){
+        $(By.cssSelector("span[class*='checkbox']")).click();
+        $(By.id("password")).setValue(PASSWORD);
+        $(By.id("passwordConfirmation")).setValue(PASSWORD).pressEnter();
     }
 
     /*Блок получения данных*/
@@ -264,23 +278,6 @@ public class ConsumerMenu {
         BUTTON_MENU_CONSUMER.click();
         return balance;
     }
-
-    /*Получение индекса нужной валюты*/
-    public int getCurrencyIndex(String currency) {
-        int size = CURRENCIES.size();
-        String[] currency2 = new String[size];
-        int index = 0;
-        for (int i = 1; i < size; i++) {
-            String total = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
-            currency2[i] = total.substring(total.indexOf(' ') + 1);
-            if (currency2[i] == currency) {
-                index = i;
-            }
-        }
-        System.out.println("Индекс валюты = "+index);
-        return(index);
-    }
-
 
     /*Получение текущенй даты в формате дд.мм.гггг*/
     public String getDate() {
@@ -358,7 +355,7 @@ public class ConsumerMenu {
         //1. Проверка заголовка
         $(By.cssSelector("h2[class='hP']")).should(Condition.have(Condition.text(title)));
         //2. Проверка текста
-        $(By.xpath("//*[contains(text(), '" + message + "')]")).shouldBe(Condition.visible);
+        $(By.xpath("//span[contains(text(), '" + message + "')]")).shouldBe(Condition.visible);
     }
 
     /*Проверка на почте двух уведомлений в одной ветке (НЕ ВСЕГДА КОРРЕКТНО РАБОТАЕТ, 1. первое письмо может быть свернуто 2. функция удаления писем не работает)*/
@@ -366,7 +363,7 @@ public class ConsumerMenu {
         Gmail gmail = new Gmail();
         gmail.login();
         gmail.openUnreadEmailBySubject(title);
-      //  $(By.cssSelector("div[class='iA g6']"),1).click();
+        //  $(By.cssSelector("div[class='iA g6']"),1).click();
         //1. Проверка заголовка
         $(By.cssSelector("h2[class='hP']")).should(Condition.have(Condition.text(title)));
         //2. Проверка текстов
@@ -375,25 +372,33 @@ public class ConsumerMenu {
         gmail.deteleAllEmails();
     }
 
-    /*Проверка того, что баланс валют, кроме выбранной, остался неизменным*/
-    public void checkOtherCurrencies(int i, double[] currency1,double[] currency2){
+    /*Проверка того, что баланс всех валют остался неизменным*/
+    public void checkBalanceConstant(double[] currency1, double[] currency2) {
         int size = CURRENCIES.size();
-        for (int j = 0; j < size; j++) {
-            if (i!=j) {
-                Assertions.assertEquals(0, (currency1[i] - currency2[i]));
-            }
+        for (int i = 0; i < size; i++) {
+            Assertions.assertEquals(0, (currency1[i] - currency2[i]));
         }
     }
 
     /*Проверка того, что баланс валюты с заданным индексом увеличился на значение amount, а баланс остальных остался неизменным*/
-    public void checkCurrencies(int i, double amount, double[] currency1,double[] currency2){
+    public void checkBalance(String currency, double amount, double[] currency1, double[] currency2) {
         int size = CURRENCIES.size();
-        for (int j = 0; j < size; j++) {
-            if (i!=j) {
-                Assertions.assertEquals(0, (currency1[i] - currency2[i]));
+        String[] currency3 = new String[size];
+        int index = 0;
+        for (int i = 1; i < size; i++) {
+            String total = $(By.cssSelector("li[class='profile-info__amount']"), i).innerText();
+            currency3[i] = total.substring(total.indexOf(' ') + 1);
+            if (currency3[i] == currency) {
+                index = i;
+                break;
             }
-            else{
-                Assertions.assertEquals((roundDouble(currency1[i] + amount)), currency2);
+        }
+        System.out.println("Индекс валюты = " + index);
+        for (int j = 0; j < size; j++) {
+            if (index != j) {
+                Assertions.assertEquals(0, (currency1[index] - currency2[index]));
+            } else {
+                Assertions.assertEquals((roundDouble(currency1[index] + amount)), currency3);
             }
         }
     }

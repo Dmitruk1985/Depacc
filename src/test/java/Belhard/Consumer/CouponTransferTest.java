@@ -29,7 +29,7 @@ public class CouponTransferTest {
         consumer.checkOperationsHistory(HISTORY_COUPON_TRANSFER, CONSUMER_NAME, CONSUMER_TEST_NAME, date, 0, "BYN");
         //2. Проверка истроии операций у получателя
         consumer.signOut();
-        consumer.loginConsumerByData(EMAIL_CONSUMER_TEST,PASSWORD);
+        consumer.loginByData(EMAIL_CONSUMER_TEST,PASSWORD);
         consumer.checkOperationsHistory(HISTORY_COUPON_TRANSFER, CONSUMER_NAME, CONSUMER_TEST_NAME, date, 0, "BYN");
         //3. Проверка сообщений у получателя
         consumer.checkMessages(MESSAGE_COUPON_TRANSFER,date,0,"");

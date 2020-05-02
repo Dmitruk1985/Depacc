@@ -16,26 +16,33 @@ public class BusinessMenu {
     public static final String BUSINESS_LOGO_NEW = "D:\\Automationtesting\\logo_business_2.jpg";
     public static final String OFFER_IMAGE_1 = "D:\\Automationtesting\\offer.jpg";
     public static final String OFFER_IMAGE_2 = "D:\\Automationtesting\\offer2.jpg";
-    public static final String DEFAULT_OFFER_NAME = "Automatic offer Type 1";
+    public static final String OFFER_IMAGE_EMPLOYEE = "D:\\Automationtesting\\offer_employee.jpg";
+    public static final String OFFER_NAME_GENERAL = "Automatic offer Genaral";
+    public static final String OFFER_NAME_BOOKABLE = "Automatic offer Bookable";
+    public static final String OFFER_NAME_EMPLOYEE = "Automatic offer Employee";
     public static final String BUSINESS_NAME = "Automatic Business";
+    public static final String EMPLOYEE_NAME = "Automatic Employee";
     public static final SelenideElement BUTTON_MENU_BUSINESS = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-business')]"));
     public static final SelenideElement BUTTON_ACCEPT_PAYMENT = $(By.cssSelector("button[class*='page-btn-primary']"));
 
     public static final String MAIL_NEW_DEPACC_BUSINESS = "Открыт новый Депак";
     public static final String HISTORY_NEW_DEPACC_BUSINESS = "Оплаченная оферта";
 
-    /**Блок функций входа и выхода из аккаунта**/
+    /**
+     * Блок функций входа и выхода из аккаунта
+     **/
     /*Вход в аккаунт с данными по умолчанию*/
     public void login() {
-        Configuration.baseUrl="https://depacc-front-dev.herokuapp.com/business";
+        Configuration.baseUrl = "https://depacc-front-dev.herokuapp.com/business";
         open(URL_BUSINESS_SIGNIN);
         $(By.id("email")).setValue(EMAIL_BUSINESS);
         $(By.id("password")).setValue(PASSWORD).pressEnter();
         sleep(1000);
     }
-/*Вход в аккаунт с определенными данными*/
+
+    /*Вход в аккаунт с определенными данными*/
     public void loginBusinessByData(String s1, String s2) {
-        Configuration.baseUrl="https://depacc-front-dev.herokuapp.com/business";
+        Configuration.baseUrl = "https://depacc-front-dev.herokuapp.com/business";
         open(URL_BUSINESS_SIGNIN);
         $(By.id("email")).setValue(s1);
         $(By.id("password")).setValue(s2).pressEnter();
@@ -55,7 +62,9 @@ public class BusinessMenu {
         return (double) i / 100;
     }
 
-     /**Блок открытия разделов меню**/
+    /**
+     * Блок открытия разделов меню
+     **/
     public void openCompanyProfile() {
         BUTTON_MENU_BUSINESS.click();
         $(By.xpath("//section[contains(@class, 'header__desktop')]//input[@value='Профиль компании']")).click();
@@ -98,18 +107,29 @@ public class BusinessMenu {
         $(By.cssSelector("input[value='Сообщения']")).click();
     }
 
-/*Блок поиска элементов*/
-    public void searchOffer(String s){
-       openMyOffers();
+    /*Блок поиска элементов*/
+    public void searchOffer(String s) {
+        openMyOffers();
         $(By.cssSelector("input[type='search']")).setValue(s);
     }
 
-    public void searchDepacc(String s){
+    public void searchDepacc(String s) {
         openDepaccs();
         $(By.cssSelector("input[type='search']")).setValue(s);
     }
 
-    /**Блок проверок**/
+    /*Изменение логотипа*/
+    public void changeLogo() {
+        openCompanyProfile();
+        $(By.cssSelector("span[class*='edit']")).click();
+        $(By.name("newImage")).setValue(BUSINESS_LOGO_NEW);
+        $(By.cssSelector("input[class*='save']")).click();
+        $(By.cssSelector("input[class*='submit']")).click();
+    }
+
+    /**
+     * Блок проверок
+     **/
     //Проверка раздела "История операций"
     public void checkOperationsHistory(String title, String sender, String recipient, String date, double amount, String currency) {
         openOperationsHistory();

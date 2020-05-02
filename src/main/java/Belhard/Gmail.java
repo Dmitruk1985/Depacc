@@ -1,6 +1,7 @@
 package Belhard;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static Belhard.ConsumerMenu.EMAIL_CONSUMER;
@@ -17,6 +18,12 @@ public class Gmail {
     /*Вход в аккаунт*/
     public void login() {
         open("https://mail.google.com");
+        SelenideElement signIn = $(By.xpath("//li[@class='h-c-header__nav-li g-mail-nav-links']/a[@class='h-c-header__nav-li-link ' and contains(text(),'Войти')]"));
+       //Иногда при отрытии сайта может открываться другая страница, в этом случае нужно нажать на кнопку.
+        if (signIn.isDisplayed()) {
+            signIn.click();
+            switchTo().window(1);
+        }
         $(By.id("identifierId")).setValue(EMAIL_CONSUMER).pressEnter();
         $(By.name("password")).setValue(PASSWORD).pressEnter();
         openInbox();

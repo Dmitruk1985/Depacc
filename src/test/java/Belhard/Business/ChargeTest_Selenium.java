@@ -13,7 +13,7 @@ import static Belhard.BusinessMenu.EMAIL_BUSINESS;
 import static Belhard.BusinessMenu.URL_BUSINESS_SIGNIN;
 import static Belhard.ConsumerMenu.*;
 
-
+/*УСТАРЕВШИЙ ТЕСТ, НУЖНЫЙ ИСКЛЮЧИТЕЛЬНО ДЛЯ ПРЕМЕРА SELENIUM*/
 public class ChargeTest_Selenium {
     @Test
     public void charge() {

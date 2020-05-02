@@ -1,14 +1,16 @@
 package Belhard.Business;
 
 import Belhard.BusinessMenu;
-import com.codeborne.selenide.Condition;
+import Belhard.ConsumerMenu;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import static Belhard.BusinessMenu.*;
-import static com.codeborne.selenide.Selenide.*;
+import static Belhard.BusinessMenu.OFFER_IMAGE_1;
+import static Belhard.BusinessMenu.OFFER_NAME_GENERAL;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
-public class CreateNewOffer_Type1 {
+public class CreateNewOffer_GeneralTest {
     @Test
     public void createNewOffer() {
         BusinessMenu business = new BusinessMenu();
@@ -18,7 +20,7 @@ public class CreateNewOffer_Type1 {
         $(By.cssSelector("button[class*='offer-create']")).click();
         $(By.name("newImage")).setValue(OFFER_IMAGE_1);
         $(By.cssSelector("input[class*='save']")).click();
-        $(By.id("title")).setValue(DEFAULT_OFFER_NAME);
+        $(By.id("title")).setValue(OFFER_NAME_GENERAL);
         $(By.id("category")).selectOptionContainingText("Automatic");
         $(By.cssSelector("div[class*='ql-editor']")).setValue("This offer is created by automatic software. #BYN #No automatic return #Available to all");
         $(By.id("amount")).setValue("10");
@@ -34,7 +36,13 @@ public class CreateNewOffer_Type1 {
         $(By.cssSelector("input[class*='select__quantity']")).setValue("1");
         $(By.cssSelector("input[class*='submit']")).click();*/
         $(By.cssSelector("input[class*='submit']")).click();
-        //Проверка отображения кнопки главного меню
-        BUTTON_MENU_BUSINESS.shouldBe(Condition.exist);
+
+        /*Блок проверок*/
+        //1. Проверка наличия созданного оффера в разделе "Мои предложения"
+        business.searchOffer(OFFER_NAME_GENERAL);
+        //2. Проверка того, что оффер виден пользователям
+        ConsumerMenu consumer = new ConsumerMenu();
+        consumer.loginByDefault();
+        consumer.searchOfferByName(OFFER_NAME_GENERAL);
     }
 }

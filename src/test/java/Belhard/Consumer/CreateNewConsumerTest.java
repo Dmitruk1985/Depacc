@@ -28,7 +28,7 @@ public class CreateNewConsumerTest {
         $(By.cssSelector("button[class*='сonfirm-signup']")).click();
         MODAL_BUTTON.click();
         //Вход в приложение с созданным пользователем
-        consumer.loginConsumerByData(email, PASSWORD);
+        consumer.loginByData(email, PASSWORD);
         //Вход в аккаунт
         BUTTON_MENU_CONSUMER.click();
 
