@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static Belhard.BusinessMenu.BUSINESS_NAME;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ConsumerMenu {
@@ -22,6 +23,7 @@ public class ConsumerMenu {
     public static final String EMAIL_CONSUMER_TEST_2 = "automation.testing.depacc+consumer2@gmail.com";
     public static final double CHARGE_AMOUNT = 0.01;
     public static final double TRANSFER_AMOUNT = 0.01;
+    public static final String BYN = "BYN";
     public static final String DEFAULT_OFFER = "Automatic offer Type 1";
     public static final String CONSUMER_NAME = "Automatic User";
     public static final String CONSUMER_TEST_NAME = "Automatic Auxiliary User";
@@ -43,12 +45,14 @@ public class ConsumerMenu {
     public static final String HISTORY_DEPACC_TRANSFER = "Трансфер оферты";
     public static final String HISTORY_COUPON_RELEASE = "Использование купона";
     public static final String HISTORY_BOOKABLE_DEPACC = "Бронирование оферты";
+    public static final String HISTORY_CHARGE = "Оплата";
 
     /*Блок названий записей в разделе "Сообщения"*/
     public static final String MESSAGE_NEW_DEPACC = "Вы открыли новый депак";
     public static final String MESSAGE_COUPON_TRANSFER = "Вы получили трансфер купона";
     public static final String MESSAGE_COUPON_RELEASE = "успешно реализован";
     public static final String MESSAGE_DEPACC_TRANSFER = "Вы получили трансфер";
+    public static final String MESSAGE_CHARGE = "Осуществлена оплата qr-кодом";
 
     /*Блок названий в уведомлениях на почте*/
     public static final String MAIL_CONFIRMATION_TITLE = "Подтверждение регистрации";
@@ -60,6 +64,7 @@ public class ConsumerMenu {
     public static final String MAIL_DEPACC_TRANSFER = "Трансфер депозита";
     public static final String MAIL_PAYMENT_TITLE = "Уведомление об успешной оплате";
     public static final String MAIL_PAYMENT_MESSAGE = "Здравствуйте";
+    public static final String MAIL_CHARGE = "Оплата qr-кодом";
 
     /**
      * Блок функций входа и выхода из аккаунта
@@ -288,6 +293,29 @@ public class ConsumerMenu {
     }
 
     /*Блок проверок*/
+    /*Проверка раздела "История операций" для стандартного случая*/
+        public void checkOperationsHistoryDefault(String title, String date, double amount) {
+        openOperationsHistory();
+        //1. Проверка названия операции
+        $(By.cssSelector("span[class*='transaction-item__title']")).shouldHave(Condition.text(title));
+        //2. Проверка отправителя
+        $(By.cssSelector("span[class='transaction-item__name']")).shouldHave(Condition.text(BUSINESS_NAME));
+        //3. Проверка получателя
+        $(By.cssSelector("span[class='transaction-item__name']"), 1).shouldHave(Condition.text(CONSUMER_NAME));
+        //4. Проверка даты
+        $(By.cssSelector("span[class*='date']")).shouldHave(Condition.text(date));
+        //5. Проверка суммы
+        double frac = roundDouble(amount % 1);
+        if (frac == 0.0) {
+            String sub = String.valueOf(amount).substring(0, String.valueOf(amount).length() - 2);
+            $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(sub));
+        } else {
+            $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(String.valueOf(amount)));
+        }
+        //6. Проверка валюты
+        $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(BYN));
+    }
+
     //Проверка раздела "История операций"
     public void checkOperationsHistory(String title, String sender, String recipient, String date, double amount, String currency) {
         openOperationsHistory();
@@ -340,8 +368,8 @@ public class ConsumerMenu {
         Gmail gmail = new Gmail();
         gmail.login();
         gmail.openUnreadEmailBySubject(title);
-        //1. Проверка заголовка
-        $(By.cssSelector("h2[class='hP']")).should(Condition.have(Condition.text(title)));
+        /*//1. Проверка заголовка
+        $(By.cssSelector("h2[class='hP']")).should(Condition.have(Condition.text(title)));*/
         //2. Проверка текста
         $(By.xpath("//p[contains(text(), '" + message + "')]")).shouldBe(Condition.visible);
         gmail.deteleAllEmails();

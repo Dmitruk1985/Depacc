@@ -7,8 +7,7 @@ import com.codeborne.selenide.Configuration;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import static Belhard.BusinessMenu.BUSINESS_LOGO;
-import static Belhard.BusinessMenu.BUTTON_MENU_BUSINESS;
+import static Belhard.BusinessMenu.*;
 import static Belhard.ConsumerMenu.PASSWORD;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -32,8 +31,8 @@ public class CreateNewBusiness {
         $(By.id("email")).setValue(email);
         $(By.id("legalName")).setValue("Automatic Business " + j);
         $(By.id("brandName")).setValue("Brand Automatic Business " + j);
-        $(By.id("authority")).setValue("УНП 123456789");
-        $(By.id("legalAddress")).setValue("г. Минск, ул. Мельникайте д.2, офис 1604");
+        $(By.id("authority")).setValue(BUSINESS_PAC);
+        $(By.id("legalAddress")).setValue(BUSINESS_ADDRESS);
         $(By.id("contactPhone")).setValue("+375290000000");
         $(By.id("contactEmail")).setValue("automation.testing.depacc+business@gmail.com");
         $(By.id("workingHours")).setValue("9:00-21:00");

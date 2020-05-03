@@ -3,19 +3,19 @@ package Belhard;
 import com.codeborne.selenide.Configuration;
 import org.junit.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
-
 
 public class UnitTest {
 
     @Test
     public void test() {
         Configuration.holdBrowserOpen = true;
+        BusinessMenu business = new BusinessMenu();
+        business.login();
+        business.openMessages();
+        ConsumerMenu consumer = new ConsumerMenu();
+         String date = consumer.getDate();
+        double d=21;
+        business.checkCheque(date,d,"BYN");
 
-        open("https://mail.google.com");
-        /*Gmail gmail = new Gmail();
-        gmail.login();*/
-        System.out.println(title());
     }
 }

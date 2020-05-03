@@ -20,6 +20,8 @@ public class BusinessMenu {
     public static final String OFFER_NAME_GENERAL = "Automatic offer Genaral";
     public static final String OFFER_NAME_BOOKABLE = "Automatic offer Bookable";
     public static final String OFFER_NAME_EMPLOYEE = "Automatic offer Employee";
+    public static final String BUSINESS_ADDRESS = "г. Минск, ул. Мельникайте д.2, офис 1604";
+    public static final String BUSINESS_PAC = "УНП 123456789";
     public static final String BUSINESS_NAME = "Automatic Business";
     public static final String EMPLOYEE_NAME = "Automatic Employee";
     public static final SelenideElement BUTTON_MENU_BUSINESS = $(By.xpath("//section[contains(@class, 'header__desktop')]//button[contains(@class, 'profile-business')]"));
@@ -27,6 +29,7 @@ public class BusinessMenu {
 
     public static final String MAIL_NEW_DEPACC_BUSINESS = "Открыт новый Депак";
     public static final String HISTORY_NEW_DEPACC_BUSINESS = "Оплаченная оферта";
+
 
     /**
      * Блок функций входа и выхода из аккаунта
@@ -151,5 +154,47 @@ public class BusinessMenu {
         }
         //6. Проверка валюты
         $(By.cssSelector("span[class*='item__amount']")).shouldHave(Condition.text(currency));
+    }
+
+    //Проверка раздела "Сообщения"
+    public void checkMessages(String title, String date, double amount, String currency) {
+        openMessages();
+        //1. Проверка заголовка
+        $(By.cssSelector("p[class='notification-item__message']")).shouldHave(Condition.text(title));
+        //2. Проверка даты
+        $(By.cssSelector("p[class*='date']")).shouldHave(Condition.text(date));
+        //3. Проверка суммы (здесь осуществляется проверка, является ли сумма 0, дробным или целым числом)
+        double frac = roundDouble(amount % 1);
+        SelenideElement amountField = $(By.cssSelector("span[class*='notification-item__amount']"));
+        if (amount == 0) {
+            amountField.shouldNotBe(Condition.visible);
+        } else {
+            if (frac == 0.0) {
+                String sub = String.valueOf(amount).substring(0, String.valueOf(amount).length() - 2);
+                amountField.shouldHave(Condition.text(sub));
+            } else {
+                amountField.shouldHave(Condition.text(String.valueOf(amount)));
+            }
+        }
+        //4. Проверка валюты
+        $(By.cssSelector("p[class*='notification-item__amount-wrapper']")).shouldHave(Condition.text(currency));
+    }
+
+    /*Проверка чека об оплате*/
+    public void checkCheque(String date, double amount,String currency){
+        $(By.className("notification-item__link-text")).click();
+        $(By.xpath("//span[contains(text(),'Магазин')]/following::span[@class='cheque__item-value']")).shouldHave(Condition.text(BUSINESS_NAME));
+        $(By.xpath("//span[contains(text(),'Адрес')]/following::span[@class='cheque__item-value']")).shouldHave(Condition.text(BUSINESS_ADDRESS));
+        $(By.xpath("//span[contains(text(),'УНП')]/following::span[@class='cheque__item-value']")).shouldHave(Condition.text(BUSINESS_PAC.substring(4)));
+        $(By.xpath("//span[contains(text(),'Дата')]/following::span[@class='cheque__item-value']")).shouldHave(Condition.text(date));
+        double frac = roundDouble(amount % 1);
+        SelenideElement amountField = $(By.cssSelector("span[class*='item-value--amount']"));
+                    if (frac == 0.0) {
+                String sub = String.valueOf(amount).substring(0, String.valueOf(amount).length() - 2);
+                amountField.shouldHave(Condition.text(sub));
+            } else {
+                amountField.shouldHave(Condition.text(String.valueOf(amount)));
+            }
+        $(By.cssSelector("span[class*='item-value--amount']")).shouldHave(Condition.text(currency));
     }
 }
